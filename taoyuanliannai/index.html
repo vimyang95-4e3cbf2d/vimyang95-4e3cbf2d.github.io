@@ -1,0 +1,969 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>桃园怜奈 - 作品档案与出演动态汇总</title>
+<meta name="description" content="桃园怜奈页面汇总其作品档案、出演类型与近期动态，整理单体作品、共演合集、专题企划的时间线与评分，并附类型选择指南、观众评论与常见问答，适合关注其演艺动向的观众查阅。">
+<meta name="keywords" content="桃园怜奈">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23b8446b'/%3E%3Cpath d='M20 44c0-10 6-20 12-20s12 10 12 20' stroke='%23fff' stroke-width='4' fill='none' stroke-linecap='round'/%3E%3Ccircle cx='32' cy='18' r='5' fill='%23f7d6e0'/%3E%3C/svg%3E">
+<style>
+:root{
+  --main:#b8446b;
+  --main-light:#d97a99;
+  --main-dark:#8a2f4f;
+  --main-pale:#fbeef3;
+  --bg:#fdfbfc;
+  --panel:#ffffff;
+  --text-1:#241a1e;
+  --text-2:#5d4f55;
+  --text-3:#8f8087;
+  --line:#eadfe4;
+  --radius-card:14px;
+  --radius-btn:10px;
+  --radius-tag:6px;
+  --radius-banner:18px;
+  --shadow:0 2px 8px rgba(80,40,55,.06);
+  --shadow-hover:0 8px 22px rgba(80,40,55,.13);
+  --font:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,sans-serif;
+  --sticky-h:118px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--sticky-h) + 12px)}
+body{font-family:var(--font);background:var(--bg);color:var(--text-1);line-height:1.75;font-size:15px}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+ul,ol{list-style:none}
+h1,h2,h3,h4{line-height:1.35;font-weight:700}
+:focus-visible{outline:3px solid var(--main-light);outline-offset:2px;border-radius:4px}
+
+/* ===== 吸顶区 ===== */
+.sticky-wrap{position:sticky;top:0;z-index:100}
+.notice-bar{background:var(--main-dark);color:#fff;font-size:13px}
+.notice-inner{max-width:1320px;margin:0 auto;padding:8px 20px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.notice-brand{font-weight:700;letter-spacing:.5px;white-space:nowrap;color:#f7d6e0}
+.notice-list{display:flex;gap:18px;flex-wrap:wrap;font-size:12.5px;color:#f7e9ee}
+.notice-list li{display:flex;gap:6px;align-items:baseline}
+.notice-list b{color:#ffd9e5;font-weight:600}
+.site-header{background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);box-shadow:0 1px 0 rgba(0,0,0,.02)}
+.header-inner{max-width:1320px;margin:0 auto;padding:12px 20px;display:flex;align-items:center;gap:24px}
+.logo{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.logo svg{width:38px;height:38px}
+.logo-text{font-size:20px;font-weight:800;letter-spacing:1px;color:var(--main-dark)}
+.main-nav{display:flex;gap:6px;flex-wrap:wrap;flex:1}
+.main-nav a{font-size:14px;color:var(--text-2);padding:6px 11px;border-radius:var(--radius-btn);white-space:nowrap;transition:background .18s,color .18s}
+.main-nav a:hover,.main-nav a.active{background:var(--main-pale);color:var(--main-dark)}
+.header-tools{display:flex;gap:8px;align-items:center;flex-shrink:0}
+.search-box{position:relative}
+.search-box input{width:190px;padding:7px 12px;border:1px solid var(--line);border-radius:var(--radius-btn);font-size:13px;font-family:var(--font);background:#fff;transition:border-color .18s}
+.search-box input:focus{border-color:var(--main-light);outline:none}
+.search-empty{position:absolute;top:110%;left:0;right:0;background:#fff;border:1px solid var(--line);border-radius:8px;padding:8px 12px;font-size:12.5px;color:var(--text-3);box-shadow:var(--shadow);display:none}
+.search-empty.show{display:block}
+.hamburger{display:none;background:none;border:1px solid var(--line);border-radius:8px;padding:7px 10px;cursor:pointer;color:var(--main-dark)}
+.hamburger svg{width:20px;height:20px;display:block}
+
+/* ===== 首屏 ===== */
+.hero{position:relative;overflow:hidden;background:
+  radial-gradient(circle at 82% 20%,rgba(217,122,153,.22),transparent 46%),
+  radial-gradient(circle at 10% 88%,rgba(184,68,107,.14),transparent 40%),
+  linear-gradient(160deg,#fff7fa 0%,#fdfbfc 62%);border-bottom:1px solid var(--line)}
+.hero-inner{max-width:1320px;margin:0 auto;padding:56px 20px 48px;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:44px;align-items:center}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--line);color:var(--main-dark);font-size:12.5px;padding:5px 13px;border-radius:999px;box-shadow:var(--shadow)}
+.hero-badge i{width:7px;height:7px;border-radius:50%;background:var(--main);display:inline-block;animation:pulse 2.6s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.45;transform:scale(.8)}}
+.hero h1{font-size:clamp(34px,4.6vw,54px);letter-spacing:2px;margin:18px 0 14px;color:var(--main-dark)}
+.hero-desc{font-size:15.5px;color:var(--text-2);max-width:560px;line-height:1.9}
+.hero-actions{margin-top:26px;display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:7px;padding:10px 20px;border-radius:var(--radius-btn);font-size:14px;font-weight:600;border:1px solid transparent;cursor:pointer;transition:transform .18s,box-shadow .18s,background .18s}
+.btn-primary{background:var(--main);color:#fff;box-shadow:var(--shadow)}
+.btn-primary:hover{background:var(--main-dark);box-shadow:var(--shadow-hover);transform:translateY(-2px)}
+.btn-ghost{background:#fff;color:var(--main-dark);border-color:var(--line)}
+.btn-ghost:hover{border-color:var(--main-light);transform:translateY(-2px);box-shadow:var(--shadow)}
+.hero-meta{margin-top:26px;display:flex;gap:26px;flex-wrap:wrap;font-size:13px;color:var(--text-3)}
+.hero-meta b{display:block;font-size:20px;color:var(--main-dark);font-weight:800}
+.hero-art{position:relative;display:flex;justify-content:center}
+.hero-art svg{width:100%;max-width:400px;height:auto;filter:drop-shadow(0 14px 30px rgba(138,47,79,.16))}
+
+/* ===== 布局 ===== */
+.layout{max-width:1320px;margin:0 auto;padding:0 20px}
+.cols{display:grid;grid-template-columns:186px minmax(0,1fr) 250px;gap:26px;align-items:start;padding:34px 0}
+.channel-nav{position:sticky;top:calc(var(--sticky-h) + 16px);background:var(--panel);border:1px solid var(--line);border-radius:var(--radius-card);padding:14px 12px;box-shadow:var(--shadow)}
+.channel-nav h2{font-size:13px;color:var(--text-3);letter-spacing:1px;padding:0 8px 10px;font-weight:600}
+.channel-nav a{display:block;font-size:13.5px;padding:8px 10px;border-radius:8px;color:var(--text-2);transition:background .16s,color .16s}
+.channel-nav a:hover,.channel-nav a.current{background:var(--main-pale);color:var(--main-dark);font-weight:600}
+.side-col{display:flex;flex-direction:column;gap:20px;position:sticky;top:calc(var(--sticky-h) + 16px)}
+.side-card{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius-card);padding:16px;box-shadow:var(--shadow)}
+.side-card h3{font-size:14px;color:var(--main-dark);margin-bottom:12px;padding-bottom:9px;border-bottom:1px dashed var(--line)}
+.rank-list li{display:flex;gap:10px;align-items:baseline;padding:7px 0;font-size:13px;border-bottom:1px dotted #f2eaee}
+.rank-list li:last-child{border-bottom:none}
+.rank-no{flex-shrink:0;width:18px;font-weight:800;color:var(--main-light);font-size:13px}
+.rank-no.top{color:var(--main)}
+.rank-list a:hover{color:var(--main)}
+.side-note{font-size:12px;color:var(--text-3);line-height:1.7}
+
+/* ===== 板块通用 ===== */
+.section{margin-bottom:46px}
+.sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;margin-bottom:20px}
+.sec-head h2{font-size:22px;color:var(--text-1);position:relative;padding-left:14px}
+.sec-head h2::before{content:"";position:absolute;left:0;top:50%;transform:translateY(-50%);width:5px;height:20px;border-radius:3px;background:linear-gradient(180deg,var(--main-light),var(--main))}
+.sec-lead{font-size:13px;color:var(--text-3)}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius-card);box-shadow:var(--shadow)}
+
+/* 概览 */
+.overview{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius-card);padding:26px 28px;box-shadow:var(--shadow)}
+.overview p{font-size:14.5px;color:var(--text-2);margin-bottom:14px}
+.overview p:last-child{margin-bottom:0}
+.overview strong{color:var(--main-dark)}
+
+/* 卡片网格 */
+.card-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(228px,1fr));gap:18px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius-card);overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column;transition:transform .2s,box-shadow .2s}
+.card:hover{transform:translateY(-3px);box-shadow:var(--shadow-hover)}
+.card-img{position:relative;aspect-ratio:4/3;overflow:hidden;background:#f3eaee}
+.card-img img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.card:hover .card-img img{transform:scale(1.04)}
+.card-type{position:absolute;left:10px;top:10px;background:rgba(138,47,79,.88);color:#fff;font-size:11.5px;padding:3px 9px;border-radius:var(--radius-tag);backdrop-filter:blur(4px)}
+.card-body{padding:13px 14px 15px;display:flex;flex-direction:column;gap:8px;flex:1}
+.card-body h3{font-size:15px;line-height:1.45}
+.card-body h3 a:hover{color:var(--main)}
+.card-tags{display:flex;gap:6px;flex-wrap:wrap}
+.tag{font-size:11.5px;background:var(--main-pale);color:var(--main-dark);padding:2px 8px;border-radius:var(--radius-tag)}
+.card-desc{font-size:12.5px;color:var(--text-2);line-height:1.7;flex:1}
+.card-foot{display:flex;justify-content:space-between;align-items:center;font-size:11.5px;color:var(--text-3);border-top:1px dashed var(--line);padding-top:8px}
+.score{color:var(--main);font-weight:700}
+
+/* 动态列表 */
+.update-list{display:flex;flex-direction:column}
+.update-item{display:grid;grid-template-columns:88px minmax(0,1fr) auto;gap:16px;align-items:baseline;padding:14px 20px;border-bottom:1px solid #f5eef1;transition:background .16s}
+.update-item:last-child{border-bottom:none}
+.update-item:hover{background:#fdf7f9}
+.update-date{font-size:12.5px;color:var(--text-3);font-variant-numeric:tabular-nums}
+.update-main b{font-size:14.5px;color:var(--text-1);font-weight:700}
+.update-main p{font-size:12.5px;color:var(--text-2);margin-top:3px}
+.update-tag{font-size:11px;color:var(--main-dark);background:var(--main-pale);padding:2px 9px;border-radius:var(--radius-tag);white-space:nowrap}
+
+/* 分类入口 */
+.cat-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.cat-item{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:15px 16px;transition:border-color .18s,transform .18s,box-shadow .18s}
+.cat-item:hover{border-color:var(--main-light);transform:translateY(-2px);box-shadow:var(--shadow)}
+.cat-item b{display:block;font-size:14.5px;color:var(--main-dark);margin-bottom:5px}
+.cat-item span{font-size:12px;color:var(--text-3);line-height:1.6}
+
+/* 深度解析 */
+.article{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius-card);padding:30px 34px;box-shadow:var(--shadow)}
+.article h3{font-size:18px;color:var(--main-dark);margin:26px 0 10px;padding-left:12px;border-left:4px solid var(--main-light)}
+.article h3:first-child{margin-top:0}
+.article p{font-size:14.5px;color:var(--text-2);margin-bottom:12px}
+.article ul{margin:0 0 14px 4px}
+.article ul li{font-size:14px;color:var(--text-2);padding-left:18px;position:relative;margin-bottom:7px}
+.article ul li::before{content:"";position:absolute;left:2px;top:.66em;width:6px;height:6px;border-radius:2px;background:var(--main-light)}
+.article blockquote{background:var(--main-pale);border-radius:10px;padding:14px 18px;font-size:14px;color:var(--main-dark);margin:14px 0;border-left:3px solid var(--main)}
+.cmp-table{width:100%;border-collapse:collapse;margin:12px 0 16px;font-size:13px}
+.cmp-table th,.cmp-table td{border:1px solid var(--line);padding:8px 11px;text-align:left;vertical-align:top}
+.cmp-table th{background:#fdf5f8;color:var(--main-dark);font-weight:600;white-space:nowrap}
+.cmp-table td{color:var(--text-2)}
+
+/* 指南步骤 */
+.steps{counter-reset:step;display:flex;flex-direction:column;gap:14px}
+.step{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px 18px 16px 58px;position:relative;box-shadow:var(--shadow)}
+.step::before{counter-increment:step;content:counter(step);position:absolute;left:16px;top:16px;width:28px;height:28px;border-radius:50%;background:var(--main);color:#fff;font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center}
+.step b{display:block;font-size:14.5px;margin-bottom:4px;color:var(--text-1)}
+.step p{font-size:13px;color:var(--text-2)}
+
+/* FAQ */
+.faq-list{display:flex;flex-direction:column;gap:10px}
+details{background:var(--panel);border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow);overflow:hidden}
+details[open]{border-color:var(--main-light)}
+summary{cursor:pointer;padding:14px 18px;font-size:14.5px;font-weight:600;color:var(--text-1);list-style:none;position:relative;padding-right:44px;transition:color .16s}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";position:absolute;right:18px;top:50%;transform:translateY(-50%);font-size:19px;color:var(--main-light);font-weight:400;transition:transform .2s}
+details[open] summary::after{content:"−";transform:translateY(-50%)}
+summary:hover{color:var(--main-dark)}
+.faq-answer{padding:0 18px 16px;font-size:13.5px;color:var(--text-2);line-height:1.8}
+
+/* 评论 */
+.comment-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(268px,1fr));gap:14px}
+.comment{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 16px;box-shadow:var(--shadow)}
+.comment-head{display:flex;align-items:center;gap:8px;margin-bottom:8px}
+.avatar{width:28px;height:28px;border-radius:50%;background:linear-gradient(135deg,var(--main-light),var(--main));color:#fff;font-size:12px;display:flex;align-items:center;justify-content:center;font-weight:700;flex-shrink:0}
+.comment-name{font-size:12.5px;color:var(--main-dark);font-weight:600}
+.comment-time{font-size:11px;color:var(--text-3);margin-left:auto}
+.comment p{font-size:13px;color:var(--text-2);line-height:1.75}
+
+/* 资讯 */
+.news-list{display:flex;flex-direction:column;gap:0}
+.news-item{display:grid;grid-template-columns:150px minmax(0,1fr);gap:16px;padding:16px 20px;border-bottom:1px solid #f5eef1;align-items:start}
+.news-item:last-child{border-bottom:none}
+.news-item img{width:150px;height:100px;object-fit:cover;border-radius:8px;border:1px solid var(--line)}
+.news-body b{font-size:14.5px;display:block;margin-bottom:5px}
+.news-body b a:hover{color:var(--main)}
+.news-body p{font-size:12.5px;color:var(--text-2);line-height:1.7}
+.news-meta{font-size:11.5px;color:var(--text-3);margin-top:6px;display:flex;gap:12px;flex-wrap:wrap}
+
+/* 推荐标签 */
+.rec-tags{display:flex;flex-wrap:wrap;gap:10px}
+.rec-tag{background:var(--panel);border:1px solid var(--line);border-radius:999px;padding:7px 16px;font-size:13px;color:var(--text-2);transition:all .18s;box-shadow:var(--shadow)}
+.rec-tag:hover{background:var(--main);color:#fff;border-color:var(--main);transform:translateY(-2px)}
+
+/* 投稿互动 */
+.submit-band{background:linear-gradient(120deg,#fff6f9,#fbeef3);border:1px solid #f2dbe4;border-radius:var(--radius-banner);padding:26px 30px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:22px;align-items:center;box-shadow:var(--shadow)}
+.submit-band h2{font-size:19px;color:var(--main-dark);margin-bottom:8px}
+.submit-band p{font-size:13.5px;color:var(--text-2);max-width:620px}
+.submit-form{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.submit-form input,.submit-form select{padding:9px 13px;border:1px solid #e7d2db;border-radius:var(--radius-btn);font-size:13px;font-family:var(--font);background:#fff;min-width:150px}
+.submit-form input:focus,.submit-form select:focus{border-color:var(--main-light);outline:none}
+.submit-msg{font-size:12.5px;color:var(--main-dark);flex-basis:100%;min-height:18px}
+
+/* 时间线 */
+.timeline{position:relative;padding-left:26px;display:flex;flex-direction:column;gap:18px}
+.timeline::before{content:"";position:absolute;left:7px;top:6px;bottom:6px;width:2px;background:linear-gradient(180deg,var(--main-light),#f2dbe4)}
+.tl-item{position:relative}
+.tl-item::before{content:"";position:absolute;left:-25px;top:6px;width:12px;height:12px;border-radius:50%;background:#fff;border:3px solid var(--main)}
+.tl-date{font-size:12px;color:var(--main-dark);font-weight:700;letter-spacing:.5px}
+.tl-item b{display:block;font-size:14px;margin:2px 0 3px}
+.tl-item p{font-size:12.5px;color:var(--text-2)}
+
+/* 页脚 */
+.site-footer{background:#2a1a20;color:#d9c8ce;margin-top:50px;padding:44px 20px 26px}
+.footer-inner{max-width:1320px;margin:0 auto;display:grid;grid-template-columns:minmax(0,1.4fr) repeat(3,minmax(0,1fr));gap:34px}
+.footer-brand{display:flex;align-items:center;gap:10px;margin-bottom:12px}
+.footer-brand svg{width:30px;height:30px}
+.footer-brand span{font-size:18px;font-weight:800;color:#fff;letter-spacing:1px}
+.footer-desc{font-size:13px;line-height:1.85;color:#b39ba4;max-width:400px}
+.footer-col h4{font-size:13.5px;color:#fff;margin-bottom:12px;letter-spacing:.5px}
+.footer-col a{display:block;font-size:12.5px;color:#b39ba4;padding:4px 0;transition:color .16s}
+.footer-col a:hover{color:#f7d6e0}
+.footer-bottom{max-width:1320px;margin:30px auto 0;padding-top:18px;border-top:1px solid #3d2830;font-size:12px;color:#8e767f;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+
+/* 回到顶部 */
+.to-top{position:fixed;right:22px;bottom:26px;width:44px;height:44px;border-radius:50%;background:var(--main);color:#fff;border:none;box-shadow:var(--shadow-hover);cursor:pointer;display:flex;align-items:center;justify-content:center;opacity:0;visibility:hidden;transform:translateY(10px);transition:opacity .25s,transform .25s,visibility .25s;z-index:90}
+.to-top.show{opacity:1;visibility:visible;transform:translateY(0)}
+.to-top svg{width:20px;height:20px}
+.overlay{position:fixed;inset:0;background:rgba(42,26,32,.45);z-index:95;opacity:0;visibility:hidden;transition:opacity .22s,visibility .22s}
+.overlay.show{opacity:1;visibility:visible}
+
+@media (max-width:1100px){
+  .cols{grid-template-columns:minmax(0,1fr) 248px}
+  .channel-nav{display:none}
+  .main-nav{display:none}
+  .main-nav.open{display:flex;position:fixed;top:var(--sticky-h);left:0;right:0;background:#fff;flex-direction:column;gap:2px;padding:14px 20px 18px;box-shadow:var(--shadow-hover);z-index:98;max-height:70vh;overflow-y:auto;border-bottom:1px solid var(--line)}
+  .hamburger{display:block}
+  .hero-inner{grid-template-columns:1fr;gap:20px}
+  .hero-art{display:none}
+  .cat-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .footer-inner{grid-template-columns:1fr 1fr}
+  .submit-band{grid-template-columns:1fr}
+}
+@media (max-width:740px){
+  :root{--sticky-h:132px}
+  .cols{grid-template-columns:1fr;padding:22px 0}
+  .side-col{position:static}
+  .header-inner{gap:12px;flex-wrap:wrap;padding:10px 16px}
+  .search-box input{width:132px}
+  .notice-inner{padding:7px 16px;gap:8px}
+  .notice-list{gap:10px;font-size:11.5px}
+  .hero-inner{padding:36px 16px 32px}
+  .hero h1{font-size:34px}
+  .hero-meta{gap:18px}
+  .layout{padding:0 16px}
+  .cat-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .card-grid{grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:12px}
+  .update-item{grid-template-columns:1fr;gap:4px;padding:12px 16px}
+  .update-tag{justify-self:start}
+  .article{padding:22px 18px}
+  .news-item{grid-template-columns:1fr;gap:10px}
+  .news-item img{width:100%;height:150px}
+  .footer-inner{grid-template-columns:1fr;gap:24px}
+  .to-top{right:14px;bottom:16px}
+  .submit-band{padding:20px}
+  .hero-actions .btn{padding:9px 16px;font-size:13px}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<div class="sticky-wrap">
+  <div class="notice-bar">
+    <div class="notice-inner">
+      <span class="notice-brand">桃园怜奈</span>
+      <ul class="notice-list">
+        <li><b>11-08</b> 新作《冬港来信》单体篇上线</li>
+        <li><b>11-06</b> 共演企划《双镜》第二话追加</li>
+        <li><b>11-03</b> 专题《旧宅三夜》高清重制版发布</li>
+        <li><b>本周</b> 收录条目累积 42 部</li>
+      </ul>
+    </div>
+  </div>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="logo" href="/#hero" aria-label="桃园怜奈 首页">
+        <svg viewBox="0 0 64 64" aria-hidden="true">
+          <rect width="64" height="64" rx="14" fill="#b8446b"/>
+          <path d="M20 44c0-10 6-20 12-20s12 10 12 20" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round"/>
+          <circle cx="32" cy="18" r="5" fill="#f7d6e0"/>
+          <path d="M26 40h12" stroke="#f7d6e0" stroke-width="3" stroke-linecap="round"/>
+        </svg>
+        <span class="logo-text">桃园怜奈</span>
+      </a>
+      <nav class="main-nav" id="mainNav" aria-label="主题导航">
+        <a href="/#overview">领域概览</a>
+        <a href="/#featured">作品精选</a>
+        <a href="/#updates">近期动态</a>
+        <a href="/#categories">分类入口</a>
+        <a href="/#analysis">深度解析</a>
+        <a href="/#guide">观看指南</a>
+        <a href="/#faq">常见问答</a>
+        <a href="/#comments">观众评论</a>
+        <a href="/#news">相关资讯</a>
+        <a href="/#timeline">作品年表</a>
+        <a href="/#submit">投稿交流</a>
+      </nav>
+      <div class="header-tools">
+        <div class="search-box">
+          <input type="search" id="siteSearch" placeholder="搜索条目 / 类型" aria-label="搜索作品或类型">
+          <div class="search-empty" id="searchEmpty">未找到匹配条目</div>
+        </div>
+        <button class="hamburger" id="hamburger" aria-label="打开导航菜单" aria-expanded="false" aria-controls="mainNav">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+</div>
+
+<div class="overlay" id="overlay"></div>
+
+<main>
+  <!-- 首屏 -->
+  <section class="hero" id="hero">
+    <div class="hero-inner">
+      <div>
+        <span class="hero-badge"><i></i>作品档案 · 更新至 2026-11-08</span>
+        <h1>桃园怜奈</h1>
+        <p class="hero-desc">围绕演员桃园怜奈的单体作品、共演合集与专题企划，按上线时间、类型标签和观众评分整理成可检索的条目档案，同时收录片场花絮、访谈片段与观众讨论，方便按类型和时长挑片。</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="/#featured">浏览精选作品</a>
+          <a class="btn btn-ghost" href="/#timeline">查看作品年表</a>
+        </div>
+        <div class="hero-meta">
+          <div><b>42</b>收录条目</div>
+          <div><b>9</b>类型方向</div>
+          <div><b>11-08</b>最近更新</div>
+        </div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <svg viewBox="0 0 400 360" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#fbeef3"/><stop offset="1" stop-color="#f3d3e0"/>
+            </linearGradient>
+            <linearGradient id="g2" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#b8446b"/><stop offset="1" stop-color="#8a2f4f"/>
+            </linearGradient>
+          </defs>
+          <rect x="24" y="30" width="352" height="300" rx="22" fill="url(#g1)"/>
+          <rect x="60" y="64" width="150" height="106" rx="12" fill="#fff" opacity=".92"/>
+          <rect x="76" y="80" width="86" height="9" rx="4.5" fill="#b8446b" opacity=".85"/>
+          <rect x="76" y="98" width="118" height="7" rx="3.5" fill="#d97a99" opacity=".6"/>
+          <rect x="76" y="114" width="98" height="7" rx="3.5" fill="#d97a99" opacity=".45"/>
+          <rect x="76" y="138" width="56" height="18" rx="9" fill="#fbeef3" stroke="#d97a99"/>
+          <rect x="226" y="64" width="122" height="106" rx="12" fill="#fff" opacity=".92"/>
+          <circle cx="287" cy="102" r="22" fill="url(#g2)" opacity=".9"/>
+          <rect x="248" y="134" width="78" height="8" rx="4" fill="#d97a99" opacity=".55"/>
+          <rect x="60" y="190" width="288" height="56" rx="12" fill="#fff" opacity=".92"/>
+          <rect x="78" y="206" width="120" height="8" rx="4" fill="#b8446b" opacity=".75"/>
+          <rect x="78" y="224" width="200" height="7" rx="3.5" fill="#d97a99" opacity=".45"/>
+          <rect x="60" y="264" width="136" height="42" rx="10" fill="url(#g2)" opacity=".88"/>
+          <rect x="212" y="264" width="136" height="42" rx="10" fill="#fff" opacity=".92" stroke="#f2dbe4"/>
+          <path d="M282 278l8 8-8 8" stroke="#b8446b" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="352" cy="44" r="14" fill="#d97a99" opacity=".5"/>
+          <circle cx="44" cy="322" r="10" fill="#b8446b" opacity=".35"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <div class="layout">
+    <div class="cols">
+      <!-- 左频道 -->
+      <aside class="channel-nav" aria-label="频道索引">
+        <h2>频道索引</h2>
+        <a href="/#overview">领域概览</a>
+        <a href="/#featured">作品精选</a>
+        <a href="/#updates">近期动态</a>
+        <a href="/#categories">分类入口</a>
+        <a href="/#analysis">深度解析</a>
+        <a href="/#guide">观看指南</a>
+        <a href="/#faq">常见问答</a>
+        <a href="/#comments">观众评论</a>
+        <a href="/#news">相关资讯</a>
+        <a href="/#recommend">相关推荐</a>
+        <a href="/#timeline">作品年表</a>
+        <a href="/#submit">投稿交流</a>
+      </aside>
+
+      <!-- 主内容 -->
+      <div>
+        <!-- 1 领域概览 -->
+        <section class="section" id="overview">
+          <div class="sec-head"><h2>领域概览：作品类型与关注方向</h2></div>
+          <div class="overview">
+            <p>桃园怜奈的演艺档案大致可分为三条线。第一条是<strong>单体作品</strong>，以单一主角贯穿全片，时长多在 90—140 分钟，剧情推进依赖场景切换和情绪段落；第二条是<strong>共演合集</strong>，与另一位演员对戏，常见结构为双线叙事或镜像对照，观众评价往往集中在两人的节奏差；第三条是<strong>专题企划</strong>，由片方按季节、场景或角色设定打包，单集 40—60 分钟，更新频率不稳定但题材偏实验。</p>
+            <p>从 2026 年下半年的上线节奏看，单体作品仍是主力，8 月至 11 月共上线 7 部，平均间隔 12 天。共演合集数量少但单部讨论度高，《双镜》系列在站内标签页的收藏数已过千。专题企划方面，《旧宅三夜》《雨夜电车站》两部走的是长时间固定机位路线，画面偏暗、对白少，喜欢节奏快的观众容易在前二十分钟弃看。</p>
+            <p>类型方向上，日常向、剧情向、场景向三类占比接近 6:3:1。日常向作品多取景公寓、便利店、通学路，成本低、产量高；剧情向依赖剧本，评分方差大；场景向集中在温泉旅馆、海边民宿、老式住宅，近两年数量下降。观众检索时最常用的词是“单体”“共演”“重制”“花絮”，其中“重制”相关条目在 10 月后明显增多。</p>
+          </div>
+        </section>
+
+        <!-- 2 精选作品 -->
+        <section class="section" id="featured">
+          <div class="sec-head">
+            <h2>精选作品：单体与共演条目</h2>
+            <span class="sec-lead">按上线时间与评分综合排序</span>
+          </div>
+          <div class="card-grid searchable">
+            <article class="card">
+              <div class="card-img"><img src="https://picsum.photos/seed/tyln-donggang-01/400/300" width="400" height="300" loading="lazy" alt="《冬港来信》海报，港口码头与冬日晨雾"><span class="card-type">单体</span></div>
+              <div class="card-body">
+                <h3><a href="/#featured">冬港来信</a></h3>
+                <div class="card-tags"><span class="tag">剧情向</span><span class="tag">港口取景</span><span class="tag">112分钟</span></div>
+                <p class="card-desc">以北方渔港为背景的单体作品，前 40 分钟几乎全在码头和候船厅，靠环境音和长镜头撑住情绪。第 58 分钟的信件独白是全片转折点。</p>
+                <div class="card-foot"><span>上线 11-08</span><span class="score">8.6</span></div>
+              </div>
+            </article>
+            <article class="card">
+              <div class="card-img"><img src="https://picsum.photos/seed/tyln-shuangjing-02/400/300" width="400" height="300" loading="lazy" alt="《双镜》第二话剧照，两面镜子对照的室内场景"><span class="card-type">共演</span></div>
+              <div class="card-body">
+                <h3><a href="/#featured">双镜 第二话</a></h3>
+                <div class="card-tags"><span class="tag">双线叙事</span><span class="tag">共演</span><span class="tag">48分钟</span></div>
+                <p class="card-desc">两位主角分处相邻房间，镜头在两面镜子间来回切换。第二话把第一话留下的时间线错位补完，对白密度比首话高出一倍。</p>
+                <div class="card-foot"><span>上线 11-06</span><span class="score">8.9</span></div>
+              </div>
+            </article>
+            <article class="card">
+              <div class="card-img"><img src="https://picsum.photos/seed/tyln-jiuzhai-03/400/300" width="400" height="300" loading="lazy" alt="《旧宅三夜》重制版封面，木结构老宅走廊"><span class="card-type">重制</span></div>
+              <div class="card-body">
+                <h3><a href="/#featured">旧宅三夜 高清重制</a></h3>
+                <div class="card-tags"><span class="tag">场景向</span><span class="tag">重制</span><span class="tag">三集</span></div>
+                <p class="card-desc">原版 2023 年上线，重制版把夜景噪点压下去不少，木地板的脚步声层次更清楚。三集分别拍客厅、走廊、阁楼，第二集评价最高。</p>
+                <div class="card-foot"><span>上线 11-03</span><span class="score">8.2</span></div>
+              </div>
+            </article>
+            <article class="card">
+              <div class="card-img"><img src="https://picsum.photos/seed/tyln-bianli-04/400/300" width="400" height="300" loading="lazy" alt="《便利店夜班》剧照，深夜便利店货架与冷柜灯光"><span class="card-type">单体</span></div>
+              <div class="card-body">
+                <h3><a href="/#featured">便利店夜班</a></h3>
+                <div class="card-tags"><span class="tag">日常向</span><span class="tag">深夜档</span><span class="tag">96分钟</span></div>
+                <p class="card-desc">全片 80% 在便利店内部完成，冷柜嗡鸣和自动门提示音反复出现。脚本偏松散，靠客串顾客的几段对话提神，第 70 分钟的雨夜段落最好。</p>
+                <div class="card-foot"><span>上线 10-29</span><span class="score">7.8</span></div>
+              </div>
+            </article>
+            <article class="card">
+              <div class="card-img"><img src="https://picsum.photos/seed/tyln-yuye-05/400/300" width="400" height="300" loading="lazy" alt="《雨夜电车站》剧照，站台顶棚滴水与末班车灯"><span class="card-type">专题</span></div>
+              <div class="card-body">
+                <h3><a href="/#featured">雨夜电车站</a></h3>
+                <div class="card-tags"><span class="tag">固定机位</span><span class="tag">实验</span><span class="tag">42分钟</span></div>
+                <p class="card-desc">整部只有一个机位，拍末班车驶离后的站台。雨声、广播、远处施工声构成全部音轨，画面几乎不动，适合当背景音看。</p>
+                <div class="card-foot"><span>上线 10-24</span><span class="score">7.4</span></div>
+              </div>
+            </article>
+            <article class="card">
+              <div class="card-img"><img src="https://picsum.photos/seed/tyln-wenquan-06/400/300" width="400" height="300" loading="lazy" alt="《温泉旅馆的午后》剧照，木质走廊与庭院竹帘"><span class="card-type">单体</span></div>
+              <div class="card-body">
+                <h3><a href="/#featured">温泉旅馆的午后</a></h3>
+                <div class="card-tags"><span class="tag">场景向</span><span class="tag">旅馆</span><span class="tag">104分钟</span></div>
+                <p class="card-desc">取景在一家昭和年间的老旅馆，榻榻米、竹帘、庭院石灯都在画里。剧情线淡，几乎靠空间本身撑戏，喜欢看布景的观众评价高。</p>
+                <div class="card-foot"><span>上线 10-18</span><span class="score">8.0</span></div>
+              </div>
+            </article>
+            <article class="card">
+              <div class="card-img"><img src="https://picsum.photos/seed/tyln-tongxue-07/400/300" width="400" height="300" loading="lazy" alt="《通学路四季》剧照，樱花树下的坡道与书包"><span class="card-type">单体</span></div>
+              <div class="card-body">
+                <h3><a href="/#featured">通学路四季</a></h3>
+                <div class="card-tags"><span class="tag">日常向</span><span class="tag">四季</span><span class="tag">128分钟</span></div>
+                <p class="card-desc">按春夏秋冬四段拍同一条坡道，季节变化用服装和光线区分。篇幅偏长，秋季段落剪得最紧，冬季段落有点拖。</p>
+                <div class="card-foot"><span>上线 10-11</span><span class="score">7.9</span></div>
+              </div>
+            </article>
+            <article class="card">
+              <div class="card-img"><img src="https://picsum.photos/seed/tyln-huaxu-08/400/300" width="400" height="300" loading="lazy" alt="《片场花絮 2026 秋》封面，摄影机与监视器"><span class="card-type">花絮</span></div>
+              <div class="card-body">
+                <h3><a href="/#featured">片场花絮 2026 秋</a></h3>
+                <div class="card-tags"><span class="tag">幕后</span><span class="tag">访谈</span><span class="tag">36分钟</span></div>
+                <p class="card-desc">收录《冬港来信》和《便利店夜班》两个片场的幕后片段，含一段 7 分钟的导演访谈，讲港口取景为什么选在清晨五点。</p>
+                <div class="card-foot"><span>上线 10-06</span><span class="score">8.1</span></div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <!-- 3 近期动态 -->
+        <section class="section" id="updates">
+          <div class="sec-head">
+            <h2>近期动态：上线与追加记录</h2>
+            <span class="sec-lead">2026-10-10 至 2026-11-08</span>
+          </div>
+          <div class="panel update-list searchable">
+            <div class="update-item">
+              <div class="update-date">11-08</div>
+              <div class="update-main"><b>《冬港来信》单体篇上线</b><p>片长 112 分钟，港口实景拍摄，首日评分 8.6，评论区集中在第 58 分钟的信件段落。</p></div>
+              <span class="update-tag">新作</span>
+            </div>
+            <div class="update-item">
+              <div class="update-date">11-06</div>
+              <div class="update-main"><b>《双镜》第二话追加</b><p>共演企划补完首话的时间线错位，片尾追加 3 分钟未公开对白，收藏数当日涨 240。</p></div>
+              <span class="update-tag">共演</span>
+            </div>
+            <div class="update-item">
+              <div class="update-date">11-03</div>
+              <div class="update-main"><b>《旧宅三夜》高清重制版发布</b><p>原版 2023 年上线，重制版重调夜景噪点，木地板脚步声层次提升，三集统一为 4K 规格。</p></div>
+              <span class="update-tag">重制</span>
+            </div>
+            <div class="update-item">
+              <div class="update-date">10-29</div>
+              <div class="update-main"><b>《便利店夜班》上线</b><p>深夜档日常向，96 分钟，客串顾客由三位舞台剧演员出演，第 70 分钟雨夜段落被反复提及。</p></div>
+              <span class="update-tag">新作</span>
+            </div>
+            <div class="update-item">
+              <div class="update-date">10-24</div>
+              <div class="update-main"><b>《雨夜电车站》专题篇发布</b><p>固定机位实验短片，42 分钟，音轨只保留站台环境声，站内标记“背景音向”标签。</p></div>
+              <span class="update-tag">专题</span>
+            </div>
+            <div class="update-item">
+              <div class="update-date">10-18</div>
+              <div class="update-main"><b>《温泉旅馆的午后》上线</b><p>昭和年间老旅馆取景，104 分钟，布景讨论占评论多数，剧情线被指偏淡。</p></div>
+              <span class="update-tag">新作</span>
+            </div>
+            <div class="update-item">
+              <div class="update-date">10-11</div>
+              <div class="update-main"><b>《通学路四季》上线</b><p>四个季节段落同一条坡道，128 分钟，秋季段落剪辑最紧，冬季段落被指拖沓。</p></div>
+              <span class="update-tag">新作</span>
+            </div>
+            <div class="update-item">
+              <div class="update-date">10-06</div>
+              <div class="update-main"><b>《片场花絮 2026 秋》发布</b><p>36 分钟幕后合集，含导演访谈 7 分钟，解释港口取景为何定在清晨五点。</p></div>
+              <span class="update-tag">花絮</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- 4 分类入口 -->
+        <section class="section" id="categories">
+          <div class="sec-head"><h2>分类入口：按类型与场景筛选</h2></div>
+          <div class="cat-grid">
+            <a class="cat-item" href="/#featured"><b>单体作品</b><span>单一主角贯穿，90—140 分钟，产量最高</span></a>
+            <a class="cat-item" href="/#featured"><b>共演合集</b><span>双人对戏，镜像或双线结构，讨论度高</span></a>
+            <a class="cat-item" href="/#featured"><b>专题企划</b><span>季节或场景打包，单集 40—60 分钟</span></a>
+            <a class="cat-item" href="/#featured"><b>高清重制</b><span>旧作修复，噪点与音轨重新处理</span></a>
+            <a class="cat-item" href="/#featured"><b>日常向</b><span>公寓、便利店、通学路，低成本高产</span></a>
+            <a class="cat-item" href="/#featured"><b>剧情向</b><span>依赖剧本，评分方差最大的一类</span></a>
+            <a class="cat-item" href="/#featured"><b>场景向</b><span>旅馆、海边民宿、老式住宅取景</span></a>
+            <a class="cat-item" href="/#featured"><b>幕后花絮</b><span>片场记录与访谈，单集 30—40 分钟</span></a>
+          </div>
+        </section>
+
+        <!-- 5 深度解析 -->
+        <section class="section" id="analysis">
+          <div class="sec-head"><h2>深度解析：单体、共演与专题的差异</h2></div>
+          <article class="article">
+            <h3>单体作品为什么评分方差最小</h3>
+            <p>把 2026 年 8 月到 11 月上线的 7 部单体作品评分拉出来看，最高 8.6，最低 7.8，极差 0.8。同期共演合集两部，分别是 8.9 和 7.6，极差 1.3；专题企划三部，极差 1.1。单体作品方差小，原因不在质量更稳定，而在结构更可预期——单一主角、线性场景、90 分钟上下，观众对“会看到什么”的预期基本能兑现，评分自然不容易走极端。</p>
+            <p>《冬港来信》是个可核对的例子。它把前 40 分钟压给码头和候船厅，几乎没有对白，第 58 分钟才给信件独白。这种处理在单体作品里算冒险，但结构仍是线性的，观众知道主线在哪，只是节奏慢。反观《双镜》第二话，双线并进加时间线错位，观众得自己拼图，评分就分成了两拨。</p>
+            <blockquote>可核对的判断：单体作品的评分下限由结构保证，上限由场景和表演决定；共演作品的下限由两位演员的节奏匹配度决定，匹配不上，再好的剧本也救不回。</blockquote>
+            <h3>共演合集的节奏匹配问题</h3>
+            <p>《双镜》第一话上线后，评论区出现频率最高的一条是“两个人说话速度差太多”。第二话把对白密度提了一倍，节奏差被压缩，评分从 8.1 升到 8.9。这不是剧本变好，是剪辑把两人的语速差从 1.4 秒压到 0.6 秒左右——具体数值来自第二话片尾附的剪辑说明，原文写的是“对白间隔统一到 0.5—0.7 秒区间”。</p>
+            <p>共演作品还有一个隐性变量：镜头分配。第一话两人镜头比约 6:4，第二话调整到 5:5，观众对角色的代入感明显上升。片方在 11-06 的追加说明里承认了这次调整，措辞是“回应首话反馈”。</p>
+            <h3>专题企划的观看门槛</h3>
+            <p>专题企划的评分普遍低于单体，但低的原因不一样。《雨夜电车站》7.4 分，差评集中在“画面几乎不动”；《旧宅三夜》重制版 8.2 分，好评集中在“木地板脚步声层次清楚”。两部都是固定场景，差别在信息密度：前者只有环境音，后者有三集不同的空间和人物进出。</p>
+            <table class="cmp-table">
+              <caption style="text-align:left;font-size:12.5px;color:var(--text-3);padding-bottom:6px">专题企划观看门槛对照（2026 年 10—11 月）</caption>
+              <thead><tr><th>条目</th><th>单集时长</th><th>机位数量</th><th>主要信息源</th><th>评分</th></tr></thead>
+              <tbody>
+                <tr><td>雨夜电车站</td><td>42 分钟</td><td>1</td><td>站台环境声</td><td>7.4</td></tr>
+                <tr><td>旧宅三夜 重制</td><td>3×38 分钟</td><td>3—5</td><td>空间切换与人物进出</td><td>8.2</td></tr>
+                <tr><td>片场花絮 2026 秋</td><td>36 分钟</td><td>多机位</td><td>访谈对白</td><td>8.1</td></tr>
+              </tbody>
+            </table>
+            <p>机位数量和信息源类型决定了观众要不要主动“找东西看”。一个机位、只有环境音的片子，观众得自己从声音里提取信息，门槛高；多机位加访谈，信息是被递到眼前的，门槛低。专题企划的评分差距，大半来自这里。</p>
+            <h3>重制版的判断标准</h3>
+            <p>重制版值不值得看，可以拆成三项核对：画面噪点是否处理、音轨是否重混、有没有追加内容。《旧宅三夜》重制版三项都做了——夜景噪点压下去、脚步声重混、片尾追加 2 分钟未公开片段。2025 年的《海边民宿》重制只做了画面，音轨原样保留，评论区就有人指出“听感没变”。</p>
+            <ul>
+              <li>画面：看夜景和高对比场景，噪点是否成块</li>
+              <li>音轨：看环境声是否有层次，脚步、开门、雨声能否分离</li>
+              <li>追加：片尾字幕前后是否有新片段，时长是否变化</li>
+            </ul>
+            <p>三项里做了两项以上，重制版才有单独看的价值；只做画面一项，原版和高清版的差别在普通屏幕上很难看出来。</p>
+          </article>
+        </section>
+
+        <!-- 6 观看指南 -->
+        <section class="section" id="guide">
+          <div class="sec-head"><h2>观看指南：按类型挑片的顺序</h2></div>
+          <div class="steps">
+            <div class="step"><b>先按可用时间定类型</b><p>90 分钟以上选单体，40—60 分钟选专题，30 分钟左右只有花絮和访谈。时间不够硬看长片，多半会在中途放弃。</p></div>
+            <div class="step"><b>再看机位和场景数量</b><p>单机位、单场景的片子信息密度低，适合当背景音；多机位、多场景的片子需要专注看。专题企划里这两类都有，先看条目说明里的机位信息。</p></div>
+            <div class="step"><b>共演作品先看第一话评分分布</b><p>共演合集两部之间差异大，第一话评分低于 7.8 的，第二话通常靠剪辑调整补救，能不能补救看追加说明里有没有提对白间隔。</p></div>
+            <div class="step"><b>重制版核对三项</b><p>画面、音轨、追加内容，三项里两项以上有变化才值得重看。只标“高清”没标“重混”的，音轨多半原样。</p></div>
+            <div class="step"><b>同类条目比较看片长与取景</b><p>同为日常向，《便利店夜班》96 分钟、《通学路四季》128 分钟，后者四季段落节奏不均，时间紧的先看前者。</p></div>
+          </div>
+        </section>
+
+        <!-- 7 FAQ -->
+        <section class="section" id="faq">
+          <div class="sec-head"><h2>常见问答</h2></div>
+          <div class="faq-list">
+            <details>
+              <summary>《冬港来信》前 40 分钟没有对白，是刻意设计的吗？</summary>
+              <div class="faq-answer">片方在 11-08 的上线说明里写明，前段采用“环境叙事”，码头、候船厅、海雾的声音承担叙事功能，信件独白是第一个明确的信息点。导演访谈里提到，原剧本有 12 页对白被删掉，理由是“港口本身比人物说话更有内容”。</div>
+            </details>
+            <details>
+              <summary>《双镜》第一话和第二话应该按什么顺序看？</summary>
+              <div class="faq-answer">按上线顺序看。第一话铺两条时间线但不交代先后，第二话用镜像房间的对照把错位补完。先看第二话会失去拼图的过程，评论区里提前看第二话的观众普遍反映“没看懂为什么两人在不同房间”。</div>
+            </details>
+            <details>
+              <summary>《旧宅三夜》重制版和原版差别在哪？</summary>
+              <div class="faq-answer">重制版处理了夜景噪点、重混了脚步和木地板的环境声，片尾追加 2 分钟未公开片段。原版 2023 年上线时是三集分开发布，重制版统一为 4K 规格并合并了片头。只关心剧情的观众看原版即可，重制版的价值在听感和追加内容。</div>
+            </details>
+            <details>
+              <summary>《雨夜电车站》为什么评分只有 7.4？</summary>
+              <div class="faq-answer">单机位、42 分钟、画面几乎不动，音轨只有站台环境声。差评集中在“没有可看的东西”，好评集中在“适合当背景音”。它的评分分布是两极的，中间段很少，和《旧宅三夜》那种好评集中的片子不是一回事。</div>
+            </details>
+            <details>
+              <summary>共演作品里两人的镜头比例会调整吗？</summary>
+              <div class="faq-answer">会。《双镜》第一话镜头比约 6:4，第二话调整到 5:5，片方在 11-06 的追加说明里写明是“回应首话反馈”。这种调整在共演企划里不算常见，多数共演作品从第一话到最后一话镜头比不变。</div>
+            </details>
+            <details>
+              <summary>专题企划和单体作品的时长差多少？</summary>
+              <div class="faq-answer">单体作品多在 90—140 分钟，专题企划单集 40—60 分钟，三集打包总时长与一部单体作品接近。差别在结构：单体是一条线走到底，专题是三段并列，段与段之间可以跳着看。</div>
+            </details>
+          </div>
+        </section>
+
+        <!-- 8 观众评论 -->
+        <section class="section" id="comments">
+          <div class="sec-head">
+            <h2>观众评论</h2>
+            <span class="sec-lead">来自条目页与讨论区的留言</span>
+          </div>
+          <div class="comment-grid">
+            <div class="comment"><div class="comment-head"><span class="avatar">港</span><span class="comment-name">港口的风</span><span class="comment-time">11-08</span></div><p>《冬港来信》第 58 分钟那封信读出来的时候，前面 40 分钟的闷一下子有了解释。不是慢，是在等这句话。</p></div>
+            <div class="comment"><div class="comment-head"><span class="avatar">镜</span><span class="comment-name">镜子两面</span><span class="comment-time">11-07</span></div><p>双镜第二话对白密度上来了，第一话那种两人各说各话的感觉没了。5:5 的镜头比确实舒服。</p></div>
+            <div class="comment"><div class="comment-head"><span class="avatar">夜</span><span class="comment-name">夜班第三年</span><span class="comment-time">11-07</span></div><p>便利店夜班看到第 70 分钟才觉得值回时间，前面太散了。冷柜的嗡嗡声倒是很真实，听着犯困。</p></div>
+            <div class="comment"><div class="comment-head"><span class="avatar">旧</span><span class="comment-name">旧宅住户</span><span class="comment-time">11-06</span></div><p>重制版木地板的声音确实清楚了，以前听不出是几个人在走。片尾那两分钟没公开的片段有点短。</p></div>
+            <div class="comment"><div class="comment-head"><span class="avatar">雨</span><span class="comment-name">末班车乘客</span><span class="comment-time">11-05</span></div><p>雨夜电车站我看了两遍，第二遍当背景音放的，反而觉得比第一遍好。第一遍一直等事情发生，什么也没等到。</p></div>
+            <div class="comment"><div class="comment-head"><span class="avatar">温</span><span class="comment-name">温泉馒头</span><span class="comment-time">11-04</span></div><p>温泉旅馆那部的布景真的好看，竹帘和石灯拍得讲究。剧情嘛，就那样，别指望。</p></div>
+            <div class="comment"><div class="comment-head"><span class="avatar">四</span><span class="comment-name">四季豆</span><span class="comment-time">11-03</span></div><p>通学路四季 128 分钟太长了，冬季那段我快进了。秋天那段剪得好，落叶和校服颜色配得舒服。</p></div>
+            <div class="comment"><div class="comment-head"><span class="avatar">花</span><span class="comment-name">花絮收藏夹</span><span class="comment-time">11-02</span></div><p>片场花絮里导演说港口取景定在清晨五点是等雾，这个细节比正片还有意思。</p></div>
+            <div class="comment"><div class="comment-head"><span class="avatar">评</span><span class="comment-name">评分党老陈</span><span class="comment-time">11-01</span></div><p>单体评分方差小这事我信，7 部里最低 7.8，看之前基本知道会是什么样。共演就不敢盲看了。</p></div>
+            <div class="comment"><div class="comment-head"><span class="avatar">剪</span><span class="comment-name">剪辑台前的猫</span><span class="comment-time">10-31</span></div><p>对白间隔压到 0.5—0.7 秒这个说法挺具体的，比“节奏更好”这种话有用多了。希望以后多写这种。</p></div>
+            <div class="comment"><div class="comment-head"><span class="avatar">背</span><span class="comment-name">背景音爱好者</span><span class="comment-time">10-30</span></div><p>专题企划里只有雨夜电车站适合当背景音，旧宅三夜不行，空间切换太多，会分心。</p></div>
+            <div class="comment"><div class="comment-head"><span class="avatar">重</span><span class="comment-name">重制版观察员</span><span class="comment-time">10-29</span></div><p>去年海边民宿重制只修了画面，音轨原样，看的时候总觉得哪里不对。旧宅这次三项都做了，差别明显。</p></div>
+            <div class="comment"><div class="comment-head"><span class="avatar">时</span><span class="comment-name">时间不够用</span><span class="comment-time">10-27</span></div><p>90 分钟以上现在真看不完，专题企划分段这点好，一集 40 分钟，通勤路上正好。</p></div>
+            <div class="comment"><div class="comment-head"><span class="avatar">冷</span><span class="comment-name">冷柜灯管</span><span class="comment-time">10-26</span></div><p>便利店夜班客串那三位舞台剧演员，第二个顾客那段台词明显是即兴的，语气跟别人不一样。</p></div>
+            <div class="comment"><div class="comment-head"><span class="avatar">路</span><span class="comment-name">路过看看</span><span class="comment-time">10-25</span></div><p>不太懂为什么专题企划评分普遍低，我看旧宅三夜觉得挺好。可能我口味偏慢。</p></div>
+            <div class="comment"><div class="comment-head"><span class="avatar">雾</span><span class="comment-name">海雾未散</span><span class="comment-time">10-23</span></div><p>冬港来信的候船厅那场戏，背景里的广播是真实的港口班次播报还是后期配的？听着不像演的。</p></div>
+          </div>
+        </section>
+
+        <!-- 9 相关资讯 -->
+        <section class="section" id="news">
+          <div class="sec-head"><h2>相关资讯</h2></div>
+          <div class="panel news-list">
+            <div class="news-item">
+              <img src="https://picsum.photos/seed/tyln-news-port/600/400" width="600" height="400" loading="lazy" alt="港口实景拍摄现场，清晨海雾与摄影器材">
+              <div class="news-body">
+                <b><a href="/#news">《冬港来信》港口取景定在清晨五点，导演解释等雾原因</a></b>
+                <p>11-08 上线说明附导演访谈，称海雾在五点至五点半之间最稳定，超过六点雾层散开，码头背景的层次会丢。剧组连续七天在同一机位拍摄。</p>
+                <div class="news-meta"><span>2026-11-08</span><span>来源：上线说明</span></div>
+              </div>
+            </div>
+            <div class="news-item">
+              <img src="https://picsum.photos/seed/tyln-news-mirror/600/400" width="600" height="400" loading="lazy" alt="双镜第二话剪辑室，监视器上两面镜子的画面">
+              <div class="news-body">
+                <b><a href="/#news">《双镜》第二话追加 3 分钟对白，镜头比调整为 5:5</a></b>
+                <p>11-06 片方发布追加说明，写明对白间隔统一到 0.5—0.7 秒，镜头比从 6:4 调整到 5:5，理由是“回应首话反馈”。追加片段位于片尾字幕前。</p>
+                <div class="news-meta"><span>2026-11-06</span><span>来源：追加说明</span></div>
+              </div>
+            </div>
+            <div class="news-item">
+              <img src="https://picsum.photos/seed/tyln-news-restore/600/400" width="600" height="400" loading="lazy" alt="旧宅三夜重制版修复对比，木地板与走廊画面">
+              <div class="news-body">
+                <b><a href="/#news">《旧宅三夜》重制版三项修复完成，片尾追加 2 分钟</a></b>
+                <p>11-03 发布的重制版处理了夜景噪点、重混脚步声、追加未公开片段。原版 2023 年三集分开上线，重制版合并片头并统一为 4K 规格。</p>
+                <div class="news-meta"><span>2026-11-03</span><span>来源：重制说明</span></div>
+              </div>
+            </div>
+            <div class="news-item">
+              <img src="https://picsum.photos/seed/tyln-news-store/600/400" width="600" height="400" loading="lazy" alt="便利店夜班拍摄现场，深夜货架与冷柜">
+              <div class="news-body">
+                <b><a href="/#news">《便利店夜班》客串阵容公布，三位舞台剧演员出演顾客</a></b>
+                <p>10-29 上线时公布客串名单，三位演员分别出演深夜进店的顾客。第 70 分钟雨夜段落的对话被指带有即兴成分，片方未确认是否保留即兴台词。</p>
+                <div class="news-meta"><span>2026-10-29</span><span>来源：上线公告</span></div>
+              </div>
+            </div>
+            <div class="news-item">
+              <img src="https://picsum.photos/seed/tyln-news-station/600/400" width="600" height="400" loading="lazy" alt="雨夜电车站站台，末班车驶离后的顶棚滴水">
+              <div class="news-body">
+                <b><a href="/#news">《雨夜电车站》定为单机位实验短片，音轨只保留站台环境声</a></b>
+                <p>10-24 上线时标注“背景音向”标签，片长 42 分钟，全片一个机位。音轨收录雨声、广播、远处施工声，未加配乐。站内评分 7.4，呈两极分布。</p>
+                <div class="news-meta"><span>2026-10-24</span><span>来源：条目说明</span></div>
+              </div>
+            </div>
+            <div class="news-item">
+              <img src="https://picsum.photos/seed/tyln-news-onsen/600/400" width="600" height="400" loading="lazy" alt="温泉旅馆的午后，昭和年间老旅馆庭院与竹帘">
+              <div class="news-body">
+                <b><a href="/#news">《温泉旅馆的午后》取景昭和老旅馆，布景讨论超过剧情</a></b>
+                <p>10-18 上线后评论区集中在榻榻米、竹帘、庭院石灯的布景细节，剧情线被指偏淡。片长 104 分钟，取景旅馆建于 1968 年，庭院石灯为原物。</p>
+                <div class="news-meta"><span>2026-10-18</span><span>来源：条目说明</span></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 10 相关推荐 -->
+        <section class="section" id="recommend">
+          <div class="sec-head"><h2>相关推荐：按场景与类型延伸</h2></div>
+          <div class="rec-tags searchable">
+            <a class="rec-tag" href="/#featured">港口取景单体</a>
+            <a class="rec-tag" href="/#featured">双线叙事共演</a>
+            <a class="rec-tag" href="/#featured">固定机位实验短片</a>
+            <a class="rec-tag" href="/#featured">昭和旅馆场景向</a>
+            <a class="rec-tag" href="/#featured">便利深夜档</a>
+            <a class="rec-tag" href="/#featured">四季分段长片</a>
+            <a class="rec-tag" href="/#featured">重制版对比</a>
+            <a class="rec-tag" href="/#featured">片场访谈花絮</a>
+          </div>
+        </section>
+
+        <!-- 11 作品年表 -->
+        <section class="section" id="timeline">
+          <div class="sec-head"><h2>作品年表：2026 年 8—11 月</h2></div>
+          <div class="panel" style="padding:22px 24px">
+            <div class="timeline">
+              <div class="tl-item"><span class="tl-date">2026-08-14</span><b>《夏日走廊》单体篇</b><p>118 分钟，公寓走廊取景，评分 8.1，是下半年单体作品的第一部。</p></div>
+              <div class="tl-item"><span class="tl-date">2026-08-30</span><b>《午后三点的雨》单体篇</b><p>102 分钟，剧情向，评分 7.9，评论区集中在结尾十分钟的处理。</p></div>
+              <div class="tl-item"><span class="tl-date">2026-09-12</span><b>《双镜》第一话</b><p>共演企划首话，46 分钟，镜头比约 6:4，评分 8.1。</p></div>
+              <div class="tl-item"><span class="tl-date">2026-09-26</span><b>《海边民宿 夏》重制版</b><p>只做画面修复，音轨原样保留，评分 7.6，被指听感无变化。</p></div>
+              <div class="tl-item"><span class="tl-date">2026-10-11</span><b>《通学路四季》单体篇</b><p>128 分钟，四季分段，秋季段落剪辑最紧，评分 7.9。</p></div>
+              <div class="tl-item"><span class="tl-date">2026-10-24</span><b>《雨夜电车站》专题篇</b><p>单机位 42 分钟，评分 7.4，两极分布。</p></div>
+              <div class="tl-item"><span class="tl-date">2026-11-03</span><b>《旧宅三夜》高清重制</b><p>三项修复完成，片尾追加 2 分钟，评分 8.2。</p></div>
+              <div class="tl-item"><span class="tl-date">2026-11-08</span><b>《冬港来信》单体篇</b><p>112 分钟，港口实景，评分 8.6，为下半年单体作品最高分。</p></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 12 投稿互动 -->
+        <section class="section" id="submit">
+          <div class="submit-band">
+            <div>
+              <h2>投稿与交流</h2>
+              <p>手上有《冬港来信》的片场照片、旧作重制的对比截图，或者对《双镜》时间线的解读，可以提交到条目讨论区。提交时注明条目名和大致时间点，便于核对。</p>
+            </div>
+            <form class="submit-form" id="submitForm">
+              <input type="text" name="title" placeholder="条目名，如：冬港来信" aria-label="条目名" required>
+              <select name="type" aria-label="内容类型">
+                <option value="花絮">片场花絮</option>
+                <option value="截图">画面截图</option>
+                <option value="解读">时间线解读</option>
+                <option value="评论">长评</option>
+              </select>
+              <button class="btn btn-primary" type="submit">提交</button>
+              <div class="submit-msg" id="submitMsg" role="status"></div>
+            </form>
+          </div>
+        </section>
+      </div>
+
+      <!-- 右辅助栏 -->
+      <aside class="side-col" aria-label="辅助信息">
+        <div class="side-card">
+          <h3>站内热榜（11-08）</h3>
+          <ol class="rank-list">
+            <li><span class="rank-no top">1</span><a href="/#featured">冬港来信</a></li>
+            <li><span class="rank-no top">2</span><a href="/#featured">双镜 第二话</a></li>
+            <li><span class="rank-no top">3</span><a href="/#featured">旧宅三夜 重制</a></li>
+            <li><span class="rank-no">4</span><a href="/#featured">片场花絮 2026 秋</a></li>
+            <li><span class="rank-no">5</span><a href="/#featured">温泉旅馆的午后</a></li>
+            <li><span class="rank-no">6</span><a href="/#featured">便利店夜班</a></li>
+            <li><span class="rank-no">7</span><a href="/#featured">通学路四季</a></li>
+            <li><span class="rank-no">8</span><a href="/#featured">雨夜电车站</a></li>
+          </ol>
+        </div>
+        <div class="side-card">
+          <h3>类型速查</h3>
+          <p class="side-note">单体：90—140 分钟，单一主角。<br>共演：双人对戏，40—50 分钟一话。<br>专题：单集 40—60 分钟，三段并列。<br>重制：核对画面、音轨、追加三项。</p>
+        </div>
+        <div class="side-card">
+          <h3>最近更新</h3>
+          <ul class="rank-list">
+            <li><span class="rank-no">11-08</span><a href="/#updates">冬港来信 上线</a></li>
+            <li><span class="rank-no">11-06</span><a href="/#updates">双镜 第二话追加</a></li>
+            <li><span class="rank-no">11-03</span><a href="/#updates">旧宅三夜 重制</a></li>
+            <li><span class="rank-no">10-29</span><a href="/#updates">便利店夜班 上线</a></li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">
+        <svg viewBox="0 0 64 64" aria-hidden="true">
+          <rect width="64" height="64" rx="14" fill="#b8446b"/>
+          <path d="M20 44c0-10 6-20 12-20s12 10 12 20" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round"/>
+          <circle cx="32" cy="18" r="5" fill="#f7d6e0"/>
+          <path d="M26 40h12" stroke="#f7d6e0" stroke-width="3" stroke-linecap="round"/>
+        </svg>
+        <span>桃园怜奈</span>
+      </div>
+      <p class="footer-desc">档案覆盖 2026 年 8 月至 11 月的单体、共演、专题与重制条目，含上线说明、剪辑调整记录和片场访谈摘录；条目按月更新，重制版与追加片段单独标注。页面内容为示例性整理。</p>
+    </div>
+    <div class="footer-col">
+      <h4>内容频道</h4>
+      <a href="/#featured">作品精选</a>
+      <a href="/#updates">近期动态</a>
+      <a href="/#categories">分类入口</a>
+      <a href="/#timeline">作品年表</a>
+    </div>
+    <div class="footer-col">
+      <h4>解析与问答</h4>
+      <a href="/#analysis">深度解析</a>
+      <a href="/#guide">观看指南</a>
+      <a href="/#faq">常见问答</a>
+      <a href="/#comments">观众评论</a>
+    </div>
+    <div class="footer-col">
+      <h4>互动</h4>
+      <a href="/#submit">投稿交流</a>
+      <a href="/#news">相关资讯</a>
+      <a href="/#recommend">相关推荐</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 桃园怜奈作品档案整理 · 示例数据</span>
+    <span>最近核对：2026-11-08 · 对应条目《冬港来信》上线</span>
+  </div>
+</footer>
+
+<button class="to-top" id="toTop" aria-label="回到顶部">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</button>
+
+<script>
+(function(){
+  var hamburger = document.getElementById('hamburger');
+  var nav = document.getElementById('mainNav');
+  var overlay = document.getElementById('overlay');
+
+  function closeNav(){
+    nav.classList.remove('open');
+    overlay.classList.remove('show');
+    hamburger.setAttribute('aria-expanded','false');
+  }
+  function toggleNav(){
+    var open = nav.classList.toggle('open');
+    overlay.classList.toggle('show', open);
+    hamburger.setAttribute('aria-expanded', open ? 'true' : 'false');
+  }
+  hamburger.addEventListener('click', toggleNav);
+  overlay.addEventListener('click', closeNav);
+  nav.addEventListener('click', function(e){
+    if(e.target.tagName === 'A') closeNav();
+  });
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape') closeNav();
+  });
+
+  var toTop = document.getElementById('toTop');
+  window.addEventListener('scroll', function(){
+    if(window.scrollY > window.innerHeight * 0.9){
+      toTop.classList.add('show');
+    } else {
+      toTop.classList.remove('show');
+    }
+  }, {passive:true});
+  toTop.addEventListener('click', function(){
+    window.scrollTo({top:0, behavior:'smooth'});
+  });
+
+  var search = document.getElementById('siteSearch');
+  var searchEmpty = document.getElementById('searchEmpty');
+  var searchables = document.querySelectorAll('.searchable');
+  search.addEventListener('input', function(){
+    var q = search.value.trim().toLowerCase();
+    var anyVisible = false;
+    searchables.forEach(function(container){
+      var items = container.children;
+      Array.prototype.forEach.call(items, function(item){
+        if(!q){ item.style.display = ''; anyVisible = true; return; }
+        var text = item.textContent.toLowerCase();
+        var match = text.indexOf(q) !== -1;
+        item.style.display = match ? '' : 'none';
+        if(match) anyVisible = true;
+      });
+      if(!q){ container.style.display = ''; }
+    });
+    searchEmpty.classList.toggle('show', !!q && !anyVisible);
+  });
+
+  var form = document.getElementById('submitForm');
+  var msg = document.getElementById('submitMsg');
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var title = form.querySelector('input[name="title"]').value.trim();
+    if(!title){
+      msg.textContent = '请填写条目名后再提交。';
+      return;
+    }
+    msg.textContent = '已收到「' + title + '」的投稿，核对后归入对应条目讨论区。';
+    form.reset();
+  });
+
+  var sections = document.querySelectorAll('main [id]');
+  var navLinks = document.querySelectorAll('.channel-nav a');
+  if('IntersectionObserver' in window && navLinks.length){
+    var observer = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          navLinks.forEach(function(a){
+            a.classList.toggle('current', a.getAttribute('href') === '/#' + entry.target.id);
+          });
+        }
+      });
+    }, {rootMargin:'-140px 0px -60% 0px', threshold:0});
+    sections.forEach(function(s){ observer.observe(s); });
+  }
+})();
+</script>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebSite",
+  "name":"桃园怜奈",
+  "description":"桃园怜奈作品档案与出演动态汇总，整理单体作品、共演合集、专题企划与重制条目。",
+  "inLanguage":"zh-CN"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {"@type":"Question","name":"《冬港来信》前 40 分钟没有对白，是刻意设计的吗？","acceptedAnswer":{"@type":"Answer","text":"片方在 11-08 的上线说明里写明，前段采用环境叙事，码头、候船厅、海雾的声音承担叙事功能，信件独白是第一个明确的信息点。原剧本有 12 页对白被删掉。"}},
+    {"@type":"Question","name":"《双镜》第一话和第二话应该按什么顺序看？","acceptedAnswer":{"@type":"Answer","text":"按上线顺序看。第一话铺两条时间线但不交代先后，第二话用镜像房间的对照把错位补完。提前看第二话会失去拼图的过程。"}},
+    {"@type":"Question","name":"《旧宅三夜》重制版和原版差别在哪？","acceptedAnswer":{"@type":"Answer","text":"重制版处理了夜景噪点、重混了脚步和木地板的环境声，片尾追加 2 分钟未公开片段。原版 2023 年上线时三集分开发布，重制版统一为 4K 规格并合并片头。"}},
+    {"@type":"Question","name":"《雨夜电车站》为什么评分只有 7.4？","acceptedAnswer":{"@type":"Answer","text":"单机位、42 分钟、画面几乎不动，音轨只有站台环境声。差评集中在没有可看的东西，好评集中在适合当背景音，评分呈两极分布。"}},
+    {"@type":"Question","name":"共演作品里两人的镜头比例会调整吗？","acceptedAnswer":{"@type":"Answer","text":"会。《双镜》第一话镜头比约 6:4，第二话调整到 5:5，片方在 11-06 的追加说明里写明是回应首话反馈。多数共演作品从第一话到最后一话镜头比不变。"}},
+    {"@type":"Question","name":"专题企划和单体作品的时长差多少？","acceptedAnswer":{"@type":"Answer","text":"单体作品多在 90—140 分钟，专题企划单集 40—60 分钟，三集打包总时长与一部单体作品接近。单体是一条线走到底，专题是三段并列，段与段之间可以跳着看。"}}
+  ]
+}
+</script>
+</body>
+                  </html>
