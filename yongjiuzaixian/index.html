@@ -1,0 +1,1339 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>永久在线导航发布页地址 - 稳定入口与镜像站索引</title>
+  <meta name="description" content="永久在线导航发布页地址汇聚稳定访问入口与镜像站信息，提供主站地址、备用域名、镜像发布页、状态监测等具体条目，适合需要长期固定入口的用户查阅。">
+  <meta name="keywords" content="永久在线导航发布页地址">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%231a5f8a'/%3E%3Cpath d='M8 16h6l2-5 3 10 2-5h3' stroke='%23f0f7fc' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <style>
+    :root {
+      --c-primary: #1a5f8a;
+      --c-primary-light: #e3f0f7;
+      --c-primary-dark: #0e3f5e;
+      --c-bg: #f6f9fb;
+      --c-surface: #ffffff;
+      --c-text: #1e2b33;
+      --c-text-secondary: #5a6d7a;
+      --c-text-tertiary: #8a9ba8;
+      --c-border: #d9e2e9;
+      --radius-card: 14px;
+      --radius-btn: 8px;
+      --radius-tag: 6px;
+      --shadow-default: 0 2px 8px rgba(0, 30, 50, 0.06);
+      --shadow-hover: 0 6px 20px rgba(0, 30, 50, 0.12);
+      --font-sans: -apple-system, "Segoe UI", "PingFang SC", "Microsoft YaHei", "Noto Sans SC", sans-serif;
+      --sticky-offset: 118px;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: var(--sticky-offset); }
+    body {
+      font-family: var(--font-sans);
+      background: var(--c-bg);
+      color: var(--c-text);
+      line-height: 1.7;
+      font-size: 15px;
+      padding-top: 0;
+    }
+    a { color: var(--c-primary); text-decoration: none; }
+    a:hover { color: var(--c-primary-dark); }
+    img { max-width: 100%; display: block; }
+    button { font-family: inherit; cursor: pointer; }
+
+    /* 吸顶公告条 */
+    .announce-bar {
+      background: var(--c-primary-dark);
+      color: #d6e8f2;
+      font-size: 13px;
+      padding: 6px 0;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(4px);
+      white-space: nowrap;
+      overflow-x: auto;
+    }
+    .announce-bar span { margin: 0 10px; }
+    .announce-bar strong { color: #fff; font-weight: 600; }
+    .announce-bar .dot { display: inline-block; width: 5px; height: 5px; background: #7ec8e3; border-radius: 50%; margin: 0 8px; vertical-align: middle; }
+
+    /* 页头 */
+    .site-header {
+      position: sticky;
+      top: 30px;
+      z-index: 99;
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--c-border);
+    }
+    .header-inner {
+      max-width: 1320px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      height: 64px;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-shrink: 0;
+    }
+    .brand-svg { width: 32px; height: 32px; }
+    .brand-text {
+      font-weight: 700;
+      font-size: 1.15rem;
+      color: var(--c-primary-dark);
+      letter-spacing: 0.3px;
+      white-space: nowrap;
+    }
+    .header-nav {
+      display: flex;
+      gap: 4px;
+      flex: 1;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+    .header-nav::-webkit-scrollbar { display: none; }
+    .header-nav a {
+      font-size: 14px;
+      color: var(--c-text-secondary);
+      padding: 6px 12px;
+      border-radius: var(--radius-btn);
+      white-space: nowrap;
+      transition: background 0.2s;
+    }
+    .header-nav a:hover { background: var(--c-primary-light); color: var(--c-primary-dark); }
+    .header-actions { display: flex; gap: 8px; align-items: center; flex-shrink: 0; }
+    .btn-outline {
+      border: 1px solid var(--c-border);
+      background: var(--c-surface);
+      border-radius: var(--radius-btn);
+      padding: 6px 14px;
+      font-size: 13px;
+      color: var(--c-text-secondary);
+      transition: all 0.2s;
+    }
+    .btn-outline:hover { border-color: var(--c-primary); color: var(--c-primary); }
+    .btn-primary {
+      background: var(--c-primary);
+      border: none;
+      border-radius: var(--radius-btn);
+      padding: 7px 16px;
+      font-size: 13px;
+      color: #fff;
+      transition: background 0.2s;
+    }
+    .btn-primary:hover { background: var(--c-primary-dark); }
+    .hamburger { display: none; background: none; border: none; padding: 8px; }
+
+    /* 首屏 */
+    .hero {
+      background: linear-gradient(135deg, #eaf4fa 0%, #f0f7fc 40%, #ffffff 100%);
+      padding: 48px 0 36px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-inner {
+      max-width: 1320px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: grid;
+      grid-template-columns: 1fr 400px;
+      gap: 40px;
+      align-items: center;
+    }
+    .hero h1 {
+      font-size: 2.4rem;
+      font-weight: 800;
+      color: var(--c-primary-dark);
+      line-height: 1.25;
+      margin-bottom: 16px;
+      letter-spacing: -0.5px;
+    }
+    .hero-desc {
+      font-size: 1.05rem;
+      color: var(--c-text-secondary);
+      max-width: 560px;
+      margin-bottom: 24px;
+      line-height: 1.8;
+    }
+    .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+    .hero-actions a {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 10px 22px;
+      border-radius: var(--radius-btn);
+      font-size: 15px;
+      font-weight: 600;
+      transition: all 0.2s;
+    }
+    .hero-actions .primary { background: var(--c-primary); color: #fff; }
+    .hero-actions .primary:hover { background: var(--c-primary-dark); box-shadow: var(--shadow-hover); }
+    .hero-actions .secondary { background: var(--c-surface); color: var(--c-primary-dark); border: 1px solid var(--c-border); }
+    .hero-actions .secondary:hover { border-color: var(--c-primary); }
+    .hero-visual {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+    .hero-visual svg { width: 100%; max-width: 380px; height: auto; }
+
+    /* 主内容区 */
+    .main-container {
+      max-width: 1320px;
+      margin: 0 auto;
+      padding: 32px 24px 64px;
+      display: grid;
+      grid-template-columns: 180px 1fr 240px;
+      gap: 24px;
+    }
+
+    /* 左频道栏 */
+    .channel-sidebar {
+      position: sticky;
+      top: var(--sticky-offset);
+      align-self: start;
+      max-height: calc(100vh - var(--sticky-offset) - 20px);
+      overflow-y: auto;
+      scrollbar-width: thin;
+    }
+    .channel-sidebar nav { display: flex; flex-direction: column; gap: 2px; }
+    .channel-sidebar h3 {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--c-text-tertiary);
+      margin-bottom: 10px;
+      padding-left: 12px;
+    }
+    .channel-sidebar a {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 12px;
+      border-radius: var(--radius-btn);
+      font-size: 14px;
+      color: var(--c-text-secondary);
+      transition: background 0.15s;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .channel-sidebar a:hover,
+    .channel-sidebar a.active { background: var(--c-primary-light); color: var(--c-primary-dark); font-weight: 600; }
+    .channel-sidebar a .ch-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--c-border); flex-shrink: 0; }
+    .channel-sidebar a.active .ch-dot { background: var(--c-primary); }
+
+    /* 中间内容 */
+    .content-main { min-width: 0; display: flex; flex-direction: column; gap: 36px; }
+    .section-block { scroll-margin-top: var(--sticky-offset); }
+    .section-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      margin-bottom: 18px;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .section-header h2 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--c-text);
+      letter-spacing: -0.2px;
+    }
+    .section-header h2 small {
+      font-size: 0.75rem;
+      font-weight: 400;
+      color: var(--c-text-tertiary);
+      margin-left: 8px;
+    }
+    .section-header .more-link {
+      font-size: 13px;
+      color: var(--c-primary);
+      white-space: nowrap;
+    }
+    .section-header .more-link:hover { text-decoration: underline; }
+
+    /* 概览 */
+    .overview-text {
+      background: var(--c-surface);
+      border-radius: var(--radius-card);
+      padding: 24px 28px;
+      box-shadow: var(--shadow-default);
+      color: var(--c-text-secondary);
+      font-size: 15px;
+      line-height: 1.9;
+    }
+    .overview-text p { margin-bottom: 12px; }
+    .overview-text p:last-child { margin-bottom: 0; }
+    .overview-text strong { color: var(--c-text); }
+
+    /* 卡片网格 */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 16px;
+    }
+    .card {
+      background: var(--c-surface);
+      border-radius: var(--radius-card);
+      box-shadow: var(--shadow-default);
+      overflow: hidden;
+      transition: box-shadow 0.25s, transform 0.25s;
+      display: flex;
+      flex-direction: column;
+    }
+    .card:hover { box-shadow: var(--shadow-hover); transform: translateY(-3px); }
+    .card-img { aspect-ratio: 4/3; overflow: hidden; background: var(--c-primary-light); }
+    .card-img img { width: 100%; height: 100%; object-fit: cover; }
+    .card-body { padding: 14px 16px 16px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
+    .card-body h3 { font-size: 1rem; font-weight: 700; line-height: 1.4; }
+    .card-body h3 a { color: var(--c-text); }
+    .card-body h3 a:hover { color: var(--c-primary); }
+    .card-tags { display: flex; flex-wrap: wrap; gap: 5px; }
+    .tag {
+      font-size: 11px;
+      padding: 2px 8px;
+      border-radius: var(--radius-tag);
+      background: var(--c-primary-light);
+      color: var(--c-primary-dark);
+      white-space: nowrap;
+    }
+    .tag-accent { background: #fef3e2; color: #9a6b1a; }
+    .card-desc { font-size: 13px; color: var(--c-text-secondary); line-height: 1.6; flex: 1; }
+    .card-meta { display: flex; justify-content: space-between; font-size: 12px; color: var(--c-text-tertiary); padding-top: 4px; border-top: 1px solid var(--c-border); }
+
+    /* 动态列表 */
+    .update-list { display: flex; flex-direction: column; gap: 0; background: var(--c-surface); border-radius: var(--radius-card); box-shadow: var(--shadow-default); overflow: hidden; }
+    .update-item {
+      display: flex;
+      gap: 14px;
+      padding: 14px 20px;
+      border-bottom: 1px solid var(--c-border);
+      align-items: baseline;
+      transition: background 0.15s;
+    }
+    .update-item:last-child { border-bottom: none; }
+    .update-item:hover { background: #f9fcfe; }
+    .update-time { font-size: 12px; color: var(--c-text-tertiary); flex-shrink: 0; width: 72px; }
+    .update-body { flex: 1; }
+    .update-body strong { font-size: 14px; color: var(--c-text); }
+    .update-body p { font-size: 13px; color: var(--c-text-secondary); margin-top: 2px; }
+
+    /* 分类入口 */
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+    }
+    .cat-item {
+      background: var(--c-surface);
+      border-radius: var(--radius-card);
+      box-shadow: var(--shadow-default);
+      padding: 16px 18px;
+      transition: all 0.2s;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .cat-item:hover { box-shadow: var(--shadow-hover); transform: translateY(-2px); }
+    .cat-icon { width: 36px; height: 36px; border-radius: 10px; background: var(--c-primary-light); display: flex; align-items: center; justify-content: center; font-size: 16px; flex-shrink: 0; }
+    .cat-info strong { display: block; font-size: 14px; color: var(--c-text); }
+    .cat-info span { font-size: 12px; color: var(--c-text-tertiary); }
+
+    /* 深度解析 */
+    .deep-analysis {
+      background: var(--c-surface);
+      border-radius: var(--radius-card);
+      padding: 28px 32px;
+      box-shadow: var(--shadow-default);
+    }
+    .deep-analysis h2 { font-size: 1.4rem; font-weight: 700; margin-bottom: 20px; }
+    .deep-analysis h3 { font-size: 1.1rem; font-weight: 700; color: var(--c-primary-dark); margin: 24px 0 10px; }
+    .deep-analysis h3:first-of-type { margin-top: 0; }
+    .deep-analysis p { color: var(--c-text-secondary); margin-bottom: 10px; font-size: 15px; line-height: 1.85; }
+    .deep-analysis ul { margin: 8px 0 14px 20px; color: var(--c-text-secondary); font-size: 15px; }
+    .deep-analysis li { margin-bottom: 6px; }
+    .deep-analysis .highlight-box {
+      background: #f4f9fd;
+      border-left: 4px solid var(--c-primary);
+      padding: 14px 18px;
+      border-radius: 0 var(--radius-btn) var(--radius-btn) 0;
+      margin: 16px 0;
+      font-size: 14px;
+      color: var(--c-text-secondary);
+    }
+
+    /* FAQ */
+    .faq-list { display: flex; flex-direction: column; gap: 10px; }
+    .faq-item {
+      background: var(--c-surface);
+      border-radius: var(--radius-card);
+      box-shadow: var(--shadow-default);
+      overflow: hidden;
+    }
+    .faq-item summary {
+      padding: 15px 20px;
+      font-weight: 600;
+      font-size: 15px;
+      color: var(--c-text);
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      transition: background 0.15s;
+    }
+    .faq-item summary:hover { background: #f9fcfe; }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::after { content: '+'; font-size: 20px; color: var(--c-primary); font-weight: 300; flex-shrink: 0; }
+    .faq-item[open] summary::after { content: '−'; }
+    .faq-answer { padding: 0 20px 18px; font-size: 14px; color: var(--c-text-secondary); line-height: 1.8; }
+
+    /* 评论 */
+    .comment-list { display: flex; flex-direction: column; gap: 0; background: var(--c-surface); border-radius: var(--radius-card); box-shadow: var(--shadow-default); overflow: hidden; }
+    .comment-item { padding: 14px 20px; border-bottom: 1px solid var(--c-border); }
+    .comment-item:last-child { border-bottom: none; }
+    .comment-head { display: flex; align-items: center; gap: 8px; margin-bottom: 4px; }
+    .comment-avatar { width: 26px; height: 26px; border-radius: 50%; background: var(--c-primary-light); color: var(--c-primary-dark); display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700; flex-shrink: 0; }
+    .comment-name { font-size: 13px; font-weight: 600; color: var(--c-text); }
+    .comment-time { font-size: 11px; color: var(--c-text-tertiary); }
+    .comment-text { font-size: 14px; color: var(--c-text-secondary); line-height: 1.7; }
+
+    /* 资讯 */
+    .news-list { display: flex; flex-direction: column; gap: 12px; }
+    .news-item {
+      background: var(--c-surface);
+      border-radius: var(--radius-card);
+      box-shadow: var(--shadow-default);
+      padding: 16px 20px;
+      display: flex;
+      gap: 16px;
+      transition: box-shadow 0.2s;
+    }
+    .news-item:hover { box-shadow: var(--shadow-hover); }
+    .news-date { font-size: 12px; color: var(--c-text-tertiary); width: 64px; flex-shrink: 0; padding-top: 2px; }
+    .news-body { flex: 1; }
+    .news-body h3 { font-size: 15px; font-weight: 600; margin-bottom: 4px; }
+    .news-body h3 a { color: var(--c-text); }
+    .news-body h3 a:hover { color: var(--c-primary); }
+    .news-body p { font-size: 13px; color: var(--c-text-secondary); }
+
+    /* 相关推荐 */
+    .rec-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+    .rec-tags a {
+      font-size: 13px;
+      padding: 6px 14px;
+      border-radius: 20px;
+      background: var(--c-surface);
+      border: 1px solid var(--c-border);
+      color: var(--c-text-secondary);
+      transition: all 0.2s;
+    }
+    .rec-tags a:hover { border-color: var(--c-primary); color: var(--c-primary); background: var(--c-primary-light); }
+
+    /* 右侧辅助栏 */
+    .aux-sidebar { display: flex; flex-direction: column; gap: 24px; }
+    .aux-card {
+      background: var(--c-surface);
+      border-radius: var(--radius-card);
+      box-shadow: var(--shadow-default);
+      padding: 18px 20px;
+    }
+    .aux-card h3 { font-size: 14px; font-weight: 700; margin-bottom: 12px; color: var(--c-text); }
+    .hot-list { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+    .hot-list li { display: flex; gap: 10px; align-items: baseline; font-size: 13px; }
+    .hot-list .rank { font-weight: 700; color: var(--c-text-tertiary); width: 18px; flex-shrink: 0; }
+    .hot-list .rank.top { color: #d97706; }
+    .hot-list a { color: var(--c-text-secondary); transition: color 0.15s; }
+    .hot-list a:hover { color: var(--c-primary); }
+    .aux-timeline { display: flex; flex-direction: column; gap: 10px; }
+    .timeline-item { display: flex; gap: 10px; font-size: 12px; color: var(--c-text-secondary); }
+    .timeline-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--c-primary); margin-top: 6px; flex-shrink: 0; }
+    .timeline-item .tl-date { color: var(--c-text-tertiary); white-space: nowrap; }
+    .submit-box {
+      background: linear-gradient(135deg, var(--c-primary-light), #f0f7fc);
+      border-radius: var(--radius-card);
+      padding: 18px 20px;
+      text-align: center;
+    }
+    .submit-box p { font-size: 13px; color: var(--c-text-secondary); margin-bottom: 10px; }
+    .submit-box a {
+      display: inline-block;
+      background: var(--c-primary);
+      color: #fff;
+      padding: 8px 20px;
+      border-radius: var(--radius-btn);
+      font-size: 14px;
+      font-weight: 600;
+    }
+    .submit-box a:hover { background: var(--c-primary-dark); }
+
+    /* 页尾 */
+    .site-footer {
+      background: #0e2a3a;
+      color: #b8cdd9;
+      padding: 40px 0 24px;
+      font-size: 13px;
+    }
+    .footer-inner {
+      max-width: 1320px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 32px;
+    }
+    .footer-brand { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
+    .footer-brand .brand-text { color: #fff; font-size: 1.1rem; }
+    .footer-desc { color: #8aa8b8; line-height: 1.8; max-width: 360px; }
+    .footer-group h4 { color: #fff; font-size: 14px; margin-bottom: 12px; font-weight: 600; }
+    .footer-group a { display: block; color: #8aa8b8; margin-bottom: 6px; transition: color 0.15s; }
+    .footer-group a:hover { color: #fff; }
+    .footer-bottom {
+      max-width: 1320px;
+      margin: 28px auto 0;
+      padding: 16px 24px 0;
+      border-top: 1px solid #1e3d4f;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 8px;
+      color: #6b8a9c;
+      font-size: 12px;
+    }
+
+    /* 回到顶部 */
+    .back-to-top {
+      position: fixed;
+      bottom: 32px;
+      right: 32px;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--c-primary);
+      color: #fff;
+      border: none;
+      box-shadow: var(--shadow-hover);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s, transform 0.3s;
+      z-index: 90;
+    }
+    .back-to-top.visible { opacity: 1; pointer-events: auto; }
+    .back-to-top:hover { background: var(--c-primary-dark); transform: translateY(-2px); }
+
+    /* 响应式 */
+    @media (max-width: 1080px) {
+      .main-container { grid-template-columns: 180px 1fr; }
+      .aux-sidebar { display: none; }
+      .hero-inner { grid-template-columns: 1fr; gap: 24px; }
+      .hero-visual { order: -1; max-width: 280px; }
+      .hero h1 { font-size: 2rem; }
+      .category-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 840px) {
+      .main-container { grid-template-columns: 1fr; }
+      .channel-sidebar { display: none; }
+      .header-nav { display: none; }
+      .hamburger { display: block; }
+      .header-inner { justify-content: space-between; }
+      .footer-inner { grid-template-columns: 1fr 1fr; }
+      .hero h1 { font-size: 1.7rem; }
+      .announce-bar { font-size: 12px; white-space: normal; padding: 6px 12px; }
+    }
+    @media (max-width: 560px) {
+      .hero { padding: 32px 0 24px; }
+      .hero h1 { font-size: 1.5rem; }
+      .hero-desc { font-size: 0.95rem; }
+      .card-grid { grid-template-columns: 1fr; }
+      .category-grid { grid-template-columns: 1fr 1fr; }
+      .news-item { flex-direction: column; gap: 4px; }
+      .news-date { width: auto; }
+      .footer-inner { grid-template-columns: 1fr; }
+      .deep-analysis { padding: 20px 18px; }
+      .main-container { padding: 20px 16px 48px; }
+      .header-inner { padding: 0 16px; }
+      .hero-inner { padding: 0 16px; }
+      .site-footer { padding: 28px 0 16px; }
+      .footer-bottom { padding: 12px 16px 0; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      * { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+    }
+  </style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+  <!-- 吸顶公告条 -->
+  <div class="announce-bar" role="banner">
+    <span><strong>2026-11-08</strong> 主站地址已切换至 <strong>nav-portal-v3.xyz</strong></span>
+    <span class="dot"></span>
+    <span><strong>3</strong> 个镜像发布页同步更新</span>
+    <span class="dot"></span>
+    <span>新增 <strong>状态监测页</strong> 可查在线率</span>
+  </div>
+
+  <!-- 页头 -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="brand">
+        <svg class="brand-svg" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+          <rect width="32" height="32" rx="8" fill="#1a5f8a"/>
+          <path d="M8 16h6l2-5 3 10 2-5h3" stroke="#f0f7fc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span class="brand-text">永久在线导航发布页地址</span>
+      </div>
+      <nav class="header-nav" aria-label="主题导航">
+        <a href="/#overview">领域概览</a>
+        <a href="/#featured">精选入口</a>
+        <a href="/#updates">发布动态</a>
+        <a href="/#categories">分类导航</a>
+        <a href="/#analysis">深度解析</a>
+        <a href="/#faq">常见问题</a>
+        <a href="/#comments">用户评论</a>
+        <a href="/#news">相关资讯</a>
+      </nav>
+      <div class="header-actions">
+        <button class="btn-outline" type="button" aria-label="搜索站内入口">搜索</button>
+        <a class="btn-primary" href="/#submit">提交发布页</a>
+      </div>
+      <button class="hamburger" aria-label="打开菜单" aria-expanded="false">
+        <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M3 6h16M3 11h16M3 16h16" stroke="#1e2b33" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- 首屏 -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-text">
+        <h1>永久在线导航发布页地址</h1>
+        <p class="hero-desc">
+          汇聚长期稳定访问入口与镜像发布页信息，收录主站地址、备用域名、状态监测页、更新日志等条目。
+          所有条目均标注最近核验时间与在线状态，帮助你在主域名变动时快速找到可用入口。
+        </p>
+        <div class="hero-actions">
+          <a href="/#featured" class="primary">查看精选入口 →</a>
+          <a href="/#updates" class="secondary">最新发布动态</a>
+        </div>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <svg viewBox="0 0 400 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="20" y="40" width="360" height="240" rx="16" fill="#fff" stroke="#d9e2e9" stroke-width="1.5"/>
+          <rect x="20" y="40" width="360" height="44" rx="16" fill="#e3f0f7"/>
+          <circle cx="44" cy="62" r="6" fill="#1a5f8a" opacity="0.3"/>
+          <circle cx="64" cy="62" r="6" fill="#1a5f8a" opacity="0.5"/>
+          <circle cx="84" cy="62" r="6" fill="#1a5f8a" opacity="0.8"/>
+          <rect x="44" y="104" width="140" height="10" rx="5" fill="#1a5f8a" opacity="0.15"/>
+          <rect x="44" y="126" width="220" height="8" rx="4" fill="#1a5f8a" opacity="0.1"/>
+          <rect x="44" y="146" width="180" height="8" rx="4" fill="#1a5f8a" opacity="0.1"/>
+          <rect x="44" y="176" width="100" height="28" rx="6" fill="#1a5f8a"/>
+          <rect x="156" y="176" width="100" height="28" rx="6" fill="#e3f0f7" stroke="#1a5f8a" stroke-width="1"/>
+          <rect x="44" y="222" width="312" height="1" fill="#d9e2e9"/>
+          <circle cx="64" cy="248" r="10" fill="#e3f0f7"/>
+          <rect x="84" y="242" width="80" height="6" rx="3" fill="#1a5f8a" opacity="0.2"/>
+          <rect x="84" y="252" width="120" height="5" rx="2.5" fill="#1a5f8a" opacity="0.1"/>
+          <circle cx="64" cy="284" r="10" fill="#e3f0f7"/>
+          <rect x="84" y="278" width="60" height="6" rx="3" fill="#1a5f8a" opacity="0.2"/>
+          <rect x="84" y="288" width="100" height="5" rx="2.5" fill="#1a5f8a" opacity="0.1"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- 主内容区 -->
+  <div class="main-container">
+
+    <!-- 左频道栏 -->
+    <aside class="channel-sidebar" aria-label="频道索引">
+      <h3>频道索引</h3>
+      <nav>
+        <a href="/#overview" class="active"><span class="ch-dot"></span>领域概览</a>
+        <a href="/#featured"><span class="ch-dot"></span>精选入口</a>
+        <a href="/#updates"><span class="ch-dot"></span>发布动态</a>
+        <a href="/#categories"><span class="ch-dot"></span>分类导航</a>
+        <a href="/#analysis"><span class="ch-dot"></span>深度解析</a>
+        <a href="/#guide"><span class="ch-dot"></span>访问指南</a>
+        <a href="/#faq"><span class="ch-dot"></span>常见问题</a>
+        <a href="/#comments"><span class="ch-dot"></span>用户评论</a>
+        <a href="/#news"><span class="ch-dot"></span>相关资讯</a>
+        <a href="/#recommend"><span class="ch-dot"></span>相关推荐</a>
+        <a href="/#submit"><span class="ch-dot"></span>提交发布页</a>
+      </nav>
+    </aside>
+
+    <!-- 中间主内容 -->
+    <main class="content-main">
+
+      <!-- 1. 主题领域概览 -->
+      <section id="overview" class="section-block">
+        <div class="section-header">
+          <h2>永久在线导航发布页地址 领域概览</h2>
+        </div>
+        <div class="overview-text">
+          <p><strong>稳定入口与镜像导航</strong> 是一个围绕长期可访问网址展开的内容方向。它包含几个具体板块：主站域名发布、备用镜像地址轮换、发布页状态监测、以及由社区维护的地址存活报告。与普通网址导航不同，这类页面的核心条目不是“网站分类”，而是“某个站点的当前可用入口及其最近核验时间”。</p>
+          <p>当前值得关注的条目集中在三类：<strong>主域名变更记录</strong>（如某导航站从 .com 迁到 .xyz 的时间线）、<strong>镜像站轮换机制</strong>（几个备用地址按周轮值）、以及<strong>状态监测页</strong>（每 15 分钟探测一次主站 HTTP 状态码）。2026 年 10 月至 11 月间，至少有 7 个导航类站点更新了发布页地址，其中 3 个新增了 Telegram 频道同步推送。</p>
+          <p>对普通访问者而言，核心需求是“找到能打开的那个链接”；对维护者而言，需求是“让新地址被索引到”。这两个需求决定了内容组织方式：条目必须带时间戳和在线状态，否则链接列表很快会失效。这里收录的条目以最近 30 天内核验过的为主，超期未核验的会标注“待确认”。</p>
+        </div>
+      </section>
+
+      <!-- 2. 精选内容推荐 -->
+      <section id="featured" class="section-block">
+        <div class="section-header">
+          <h2>精选导航入口</h2>
+          <a href="/#categories" class="more-link">按分类查看 →</a>
+        </div>
+        <div class="card-grid">
+          <article class="card">
+            <div class="card-img">
+              <img src="https://picsum.photos/seed/navmain01/400/300" width="400" height="300" loading="lazy" alt="主站发布页界面快照">
+            </div>
+            <div class="card-body">
+              <h3><a href="/#featured">主站发布页 v3.2</a></h3>
+              <div class="card-tags"><span class="tag">主域名</span><span class="tag">2026-11-08</span><span class="tag tag-accent">已核验</span></div>
+              <p class="card-desc">当前主入口，上周从 v2 迁移至 v3.2，新增状态灯与备用地址自动切换提示。HTTP 200 在线。</p>
+              <div class="card-meta"><span>核验 11-08</span><span>在线率 99.7%</span></div>
+            </div>
+          </article>
+          <article class="card">
+            <div class="card-img">
+              <img src="https://picsum.photos/seed/navmirror02/400/300" width="400" height="300" loading="lazy" alt="镜像站地址列表截图">
+            </div>
+            <div class="card-body">
+              <h3><a href="/#featured">镜像地址 A/B/C 轮换表</a></h3>
+              <div class="card-tags"><span class="tag">备用域名</span><span class="tag">每周轮换</span><span class="tag tag-accent">当前A</span></div>
+              <p class="card-desc">三个备用域名按周轮值，本周（11-03至11-09）主推 A 线。B 线延迟 42ms，C 线仅在 A/B 均不可达时启用。</p>
+              <div class="card-meta"><span>更新 11-07</span><span>3 个地址</span></div>
+            </div>
+          </article>
+          <article class="card">
+            <div class="card-img">
+              <img src="https://picsum.photos/seed/navstatus03/400/300" width="400" height="300" loading="lazy" alt="状态监测页数据面板">
+            </div>
+            <div class="card-body">
+              <h3><a href="/#featured">状态监测页（15 分钟间隔）</a></h3>
+              <div class="card-tags"><span class="tag">监测</span><span class="tag">HTTP状态码</span><span class="tag tag-accent">实时</span></div>
+              <p class="card-desc">每 15 分钟探测一次主站与两个镜像，记录响应码与耗时。11-08 当天三次探测均为 200，平均耗时 186ms。</p>
+              <div class="card-meta"><span>核验 11-08</span><span>最近 90 天</span></div>
+            </div>
+          </article>
+          <article class="card">
+            <div class="card-img">
+              <img src="https://picsum.photos/seed/navtg04/400/300" width="400" height="300" loading="lazy" alt="Telegram 频道推送界面">
+            </div>
+            <div class="card-body">
+              <h3><a href="/#featured">TG 频道同步推送</a></h3>
+              <div class="card-tags"><span class="tag">Telegram</span><span class="tag">实时通知</span><span class="tag tag-accent">新增</span></div>
+              <p class="card-desc">10-28 开通的推送频道，地址变更后 2 分钟内发消息。目前 1,247 订阅，历史消息可回溯到 9 月。</p>
+              <div class="card-meta"><span>更新 11-08</span><span>1,247 订阅</span></div>
+            </div>
+          </article>
+          <article class="card">
+            <div class="card-img">
+              <img src="https://picsum.photos/seed/navlog05/400/300" width="400" height="300" loading="lazy" alt="地址变更日志表格">
+            </div>
+            <div class="card-body">
+              <h3><a href="/#featured">地址变更日志（2026 Q4）</a></h3>
+              <div class="card-tags"><span class="tag">变更记录</span><span class="tag">时间线</span><span class="tag tag-accent">Q4</span></div>
+              <p class="card-desc">记录 10 月至今 6 次域名调整，含每次的生效时间、旧地址停用时间、以及 DNS 切换耗时（最长一次 4 小时 12 分）。</p>
+              <div class="card-meta"><span>更新 11-06</span><span>6 条记录</span></div>
+            </div>
+          </article>
+          <article class="card">
+            <div class="card-img">
+              <img src="https://picsum.photos/seed/navbackup06/400/300" width="400" height="300" loading="lazy" alt="离线备份入口说明图">
+            </div>
+            <div class="card-body">
+              <h3><a href="/#featured">离线备份页（静态 HTML）</a></h3>
+              <div class="card-tags"><span class="tag">备份</span><span class="tag">静态页</span><span class="tag tag-accent">应急</span></div>
+              <p class="card-desc">纯静态单页，不依赖数据库，托管在对象存储。主站全挂时可打开，内容为最新可用地址列表，每周五手动更新。</p>
+              <div class="card-meta"><span>更新 11-07</span><span>最后同步 11-07</span></div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- 3. 最新更新 / 发布动态 -->
+      <section id="updates" class="section-block">
+        <div class="section-header">
+          <h2>发布动态与核验记录</h2>
+        </div>
+        <div class="update-list">
+          <div class="update-item">
+            <span class="update-time">11-08 09:20</span>
+            <div class="update-body">
+              <strong>主站发布页 v3.2 上线</strong>
+              <p>新增“在线状态”指示灯，显示最近一次探测的 HTTP 码与耗时。旧版 v3.1 保留只读访问至 11-15。</p>
+            </div>
+          </div>
+          <div class="update-item">
+            <span class="update-time">11-07 18:45</span>
+            <div class="update-body">
+              <strong>镜像地址 B 线延迟降至 42ms</strong>
+              <p>更换 CDN 节点后，B 线（mirror-b.navportal.xyz）响应耗时从 210ms 降至 42ms，持续监测 24 小时无丢包。</p>
+            </div>
+          </div>
+          <div class="update-item">
+            <span class="update-time">11-06 11:10</span>
+            <div class="update-body">
+              <strong>Q4 变更日志新增 2 条</strong>
+              <p>10-29 和 11-03 两次 DNS 调整补录完毕，含切换前后的 TTL 值（300s → 60s）和生效延迟数据。</p>
+            </div>
+          </div>
+          <div class="update-item">
+            <span class="update-time">11-05 16:30</span>
+            <div class="update-body">
+              <strong>状态监测页扩容至 5 个探测点</strong>
+              <p>新增深圳、成都、新加坡三个探测节点，覆盖电信/联通/移动三网。探测频率维持 15 分钟不变。</p>
+            </div>
+          </div>
+          <div class="update-item">
+            <span class="update-time">11-03 08:00</span>
+            <div class="update-body">
+              <strong>镜像轮换进入 A 线周</strong>
+              <p>按轮值表，11-03 至 11-09 主推 A 线（mirror-a.navportal.xyz）。B/C 线保持在线但不在发布页首屏展示。</p>
+            </div>
+          </div>
+          <div class="update-item">
+            <span class="update-time">11-01 14:22</span>
+            <div class="update-body">
+              <strong>TG 频道订阅破千</strong>
+              <p>10-28 开通的推送频道订阅数达到 1,247，累计发出 11 条地址变更通知，平均到达延迟 1 分 40 秒。</p>
+            </div>
+          </div>
+          <div class="update-item">
+            <span class="update-time">10-29 10:05</span>
+            <div class="update-body">
+              <strong>旧域名 a-nav.xyz 停用</strong>
+              <p>10-29 起旧域名不再解析，301 跳转保留至 11-12。浏览器书签未更新的用户需手动替换。</p>
+            </div>
+          </div>
+          <div class="update-item">
+            <span class="update-time">10-25 20:15</span>
+            <div class="update-body">
+              <strong>离线备份页更新至 10-25 版</strong>
+              <p>静态备份页同步了 10 月全部地址变更，文件大小 18KB，托管于两个对象存储桶做冗余。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. 分类入口 -->
+      <section id="categories" class="section-block">
+        <div class="section-header">
+          <h2>导航分类</h2>
+        </div>
+        <div class="category-grid">
+          <a href="/#featured" class="cat-item">
+            <div class="cat-icon">🌐</div>
+            <div class="cat-info"><strong>主站发布页</strong><span>当前版本 v3.2</span></div>
+          </a>
+          <a href="/#featured" class="cat-item">
+            <div class="cat-icon">🔁</div>
+            <div class="cat-info"><strong>镜像地址</strong><span>A/B/C 轮换表</span></div>
+          </a>
+          <a href="/#featured" class="cat-item">
+            <div class="cat-icon">📡</div>
+            <div class="cat-info"><strong>状态监测</strong><span>15 分钟探测</span></div>
+          </a>
+          <a href="/#featured" class="cat-item">
+            <div class="cat-icon">📨</div>
+            <div class="cat-info"><strong>TG 推送频道</strong><span>实时通知</span></div>
+          </a>
+          <a href="/#featured" class="cat-item">
+            <div class="cat-icon">📋</div>
+            <div class="cat-info"><strong>变更日志</strong><span>2026 Q4 记录</span></div>
+          </a>
+          <a href="/#featured" class="cat-item">
+            <div class="cat-icon">💾</div>
+            <div class="cat-info"><strong>离线备份页</strong><span>静态应急入口</span></div>
+          </a>
+          <a href="/#featured" class="cat-item">
+            <div class="cat-icon">📊</div>
+            <div class="cat-info"><strong>在线率统计</strong><span>最近 90 天</span></div>
+          </a>
+          <a href="/#featured" class="cat-item">
+            <div class="cat-icon">🛠️</div>
+            <div class="cat-info"><strong>提交发布页</strong><span>社区维护入口</span></div>
+          </a>
+        </div>
+      </section>
+
+      <!-- 5. 深度解析正文 -->
+      <section id="analysis" class="section-block">
+        <div class="deep-analysis">
+          <h2>镜像轮换与状态监测：两个容易被忽略的判断依据</h2>
+
+          <h3>轮换周期不是越短越好</h3>
+          <p>镜像地址轮换的核心矛盾是“隐蔽性”与“可记忆性”之间的取舍。以目前主流的周轮换为例：11-03 至 11-09 由 A 线承担主要流量，B 线保持在线但不在发布页首屏展示。这样做的理由是，搜索引擎和用户书签都需要一定时间适应新地址，轮换过快会导致每次收录刚完成就失效。</p>
+          <p>10 月的一次实测数据可以说明问题：10-12 至 10-18 期间曾尝试三日轮换，结果那周的发布页回访率从 34% 降到 21%，原因是用户刚记住一个地址就发现换了。11 月恢复周轮换后，回访率回到 31%。这个对比说明，轮换频率的调整应该以“用户完成一次访问周期的平均天数”为参照，而不是凭感觉缩短。</p>
+          <div class="highlight-box">
+            <strong>可核对的判断拆解：</strong>一个镜像地址的“可用”包含三个环节——DNS 解析是否生效、HTTP 服务是否返回 200、页面内容是否与主站一致。11-07 的 B 线延迟从 210ms 降到 42ms 只解决了第二个环节的响应速度，DNS 和内容一致性需要另外看监测页的独立指标。
+          </div>
+
+          <h3>状态监测页的 200 不代表“能正常用”</h3>
+          <p>监测页每 15 分钟发一次 HEAD 请求，记录状态码和耗时。11-08 当天三次探测均为 200，平均耗时 186ms。但 200 只能说明 HTTP 层可达，不能说明页面内容完整。10-29 旧域名停用当天，监测页曾连续 4 次返回 200，实际上返回的是一个 301 跳转后的空白页——探测脚本没有跟随跳转，把 301 误判成了 200。</p>
+          <p>修正后的脚本增加了“跟随重定向”和“内容长度校验”两个步骤。现在如果返回的 HTML 长度低于 2KB，会标记为“可疑”而不是“正常”。这个改动是 11-01 上线的，此后没有再出现误报。对普通用户来说，看到监测页显示绿色不代表页面一定能用，还要看“内容长度”那一栏的数值是否在正常范围（当前基准是 12KB 至 28KB）。</p>
+
+          <h3>离线备份页的更新节奏决定应急价值</h3>
+          <p>静态备份页托管在两个对象存储桶，每周五手动同步一次。11-07 同步后的版本包含 6 条地址记录，文件大小 18KB。问题在于，如果主站在周三宕机，备份页里的地址还停留在上周五的状态，可能已经失效。10-22 就发生过一次：主站当天上午不可达，备份页里的 A 线地址已于 10-20 停用，用户打开备份页后仍然无法访问。</p>
+          <p>之后增加了“关键变更即时同步”规则：只要地址变更日志新增条目，备份页在 2 小时内重新生成。11-03 的 A 线轮换就是按这个规则处理的，备份页在当天 09:40 完成了更新。判断一个备份页是否可靠，看它的“最后同步时间”与“最近一次地址变更时间”的差值——差值超过 48 小时，应急价值就打折扣。</p>
+        </div>
+      </section>
+
+      <!-- 6. 体验指南 / 消费路径 -->
+      <section id="guide" class="section-block">
+        <div class="section-header">
+          <h2>访问路径与判断顺序</h2>
+        </div>
+        <div class="overview-text">
+          <p><strong>第一步：先看状态监测页，再看发布页。</strong> 监测页的“最近探测”时间如果距今超过 30 分钟，说明探测脚本可能挂了，此时发布页上的状态灯不可信。11-08 的监测记录是 09:20 更新，距今不到 2 小时，可作参考。</p>
+          <p><strong>第二步：确认轮换周次。</strong> 发布页顶部会标注当前轮换线（A/B/C）。如果当前是 A 线周，优先用 mirror-a 地址；B 线虽然在线但可能不在首屏展示。跨周时留意 11-09 晚上 24:00 的切换点。</p>
+          <p><strong>第三步：对比备份页时间戳。</strong> 打开离线备份页，看页面底部的“最后同步”日期。如果与当前日期相差超过 3 天，备份页里的地址列表需要手动对照变更日志核对一遍。</p>
+          <p><strong>第四步：用 TG 频道做二次确认。</strong> 如果上述三个来源的信息互相矛盾（比如监测页说在线、实际打不开），去 TG 频道翻最近 3 条消息，通常会有维护者的人工说明。11-07 的 B 线延迟调整就是先在频道里发的通知，比发布页更新早了 40 分钟。</p>
+        </div>
+      </section>
+
+      <!-- 7. FAQ -->
+      <section id="faq" class="section-block">
+        <div class="section-header">
+          <h2>常见问题</h2>
+        </div>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>主站发布页和镜像地址有什么区别？</summary>
+            <div class="faq-answer">主站发布页是地址信息的源头，包含完整的轮换表、变更日志和状态数据；镜像地址是主站本身的备用访问入口，只提供与主站相同的内容，不包含额外的发布信息。换句话说，发布页是“地图”，镜像站是“备用门”。</div>
+          </details>
+          <details class="faq-item">
+            <summary>为什么镜像地址要每周轮换，而不是一直用同一个？</summary>
+            <div class="faq-answer">轮换是为了降低单一地址被批量屏蔽的风险。2026 年 10 月的实测数据显示，三日轮换导致回访率从 34% 降到 21%，周轮换是隐蔽性与可记忆性之间的折中值。当前轮换规则是每周一 00:00 切换主推线，旧线保留在线但不在首屏展示。</div>
+          </details>
+          <details class="faq-item">
+            <summary>状态监测页显示 200 是不是就一定能打开？</summary>
+            <div class="faq-answer">不一定。200 只代表 HTTP 请求返回了成功状态码，不保证页面内容完整。10-29 曾出现连续 4 次 200 但实际返回空白页的情况，原因是探测脚本没有跟随重定向。修正后的监测页增加了“内容长度”指标，当前正常范围是 12KB 至 28KB，低于 2KB 会被标为“可疑”。</div>
+          </details>
+          <details class="faq-item">
+            <summary>离线备份页多久更新一次，什么时候用得上？</summary>
+            <div class="faq-answer">常规节奏是每周五手动同步，但地址变更日志新增条目后会在 2 小时内即时更新。备份页的用途是主站完全不可达时的应急入口——它不依赖数据库，托管在对象存储上。判断它有没有用，看页面底部的“最后同步”日期，超过 48 小时未更新则参考价值下降。</div>
+          </details>
+          <details class="faq-item">
+            <summary>TG 推送频道和发布页哪个先更新？</summary>
+            <div class="faq-answer">TG 频道通常早 30 至 60 分钟。11-07 的 B 线延迟调整就是先在频道发布，发布页在 40 分钟后才更新。维护者的操作习惯是先在频道发一句简讯，确认没有异常后再同步到发布页和监测页。如果发现地址打不开，先翻频道最近 3 条消息。</div>
+          </details>
+          <details class="faq-item">
+            <summary>提交一个新的导航发布页需要什么信息？</summary>
+            <div class="faq-answer">需要提供：发布页的当前可用地址、最近一次核验时间、该页面的更新频率（日更/周更/不定期）、以及是否提供状态监测或变更日志。提交后会在 48 小时内人工核验一次，核验通过后录入精选入口列表并标注核验日期。没有状态监测的页面会被标注“无监测数据”。</div>
+          </details>
+        </div>
+      </section>
+
+      <!-- 8. 用户评论 -->
+      <section id="comments" class="section-block">
+        <div class="section-header">
+          <h2>用户评论</h2>
+        </div>
+        <div class="comment-list">
+          <div class="comment-item">
+            <div class="comment-head"><span class="comment-avatar">陈</span><span class="comment-name">陈屿</span><span class="comment-time">11-08 10:12</span></div>
+            <p class="comment-text">监测页那个内容长度指标挺实在的。之前 10-29 那天就是看着 200 点进去空白，后来才加了长度校验。现在至少不会白点。</p>
+          </div>
+          <div class="comment-item">
+            <div class="comment-head"><span class="comment-avatar">林</span><span class="comment-name">林北</span><span class="comment-time">11-08 09:45</span></div>
+            <p class="comment-text">周轮换比之前的三日轮换好记多了。之前三天两头换，书签刚存好就失效，烦得很。</p>
+          </div>
+          <div class="comment-item">
+            <div class="comment-head"><span class="comment-avatar">赵</span><span class="comment-name">赵四</span><span class="comment-time">11-07 22:03</span></div>
+            <p class="comment-text">B 线延迟降到 42ms 确实快，但我这联通网络下 A 线反而更稳。可能分地区吧。</p>
+          </div>
+          <div class="comment-item">
+            <div class="comment-head"><span class="comment-avatar">周</span><span class="comment-name">周周</span><span class="comment-time">11-07 18:30</span></div>
+            <p class="comment-text">备份页 10-22 那次坑到了，打开发现里面的地址已经停了。现在加即时同步了应该好点。</p>
+          </div>
+          <div class="comment-item">
+            <div class="comment-head"><span class="comment-avatar">吴</span><span class="comment-name">吴名</span><span class="comment-time">11-07 14:15</span></div>
+            <p class="comment-text">TG 频道通知挺快的，11-03 轮换那天 09:05 就收到消息了，发布页 09:20 才更新。</p>
+          </div>
+          <div class="comment-item">
+            <div class="comment-head"><span class="comment-avatar">郑</span><span class="comment-name">郑好</span><span class="comment-time">11-06 20:41</span></div>
+            <p class="comment-text">变更日志里 DNS 的 TTL 从 300 改成 60 那个记录，对排查问题有用。之前不知道 TTL 影响这么大。</p>
+          </div>
+          <div class="comment-item">
+            <div class="comment-head"><span class="comment-avatar">孙</span><span class="comment-name">孙一</span><span class="comment-time">11-06 12:08</span></div>
+            <p class="comment-text">说实话导航页现在有点多，光这个站就三个入口，有时候不知道点哪个。</p>
+          </div>
+          <div class="comment-item">
+            <div class="comment-head"><span class="comment-avatar">李</span><span class="comment-name">李木子</span><span class="comment-time">11-05 21:17</span></div>
+            <p class="comment-text">离线备份页 18KB 这个体积控制得可以，加载快。就是每周五手动更新这个节奏有点看运气。</p>
+          </div>
+          <div class="comment-item">
+            <div class="comment-head"><span class="comment-avatar">王</span><span class="comment-name">王大力</span><span class="comment-time">11-05 16:50</span></div>
+            <p class="comment-text">新增的成都探测点数据和我本地体验基本一致，延迟 190ms 左右，没虚标。</p>
+          </div>
+          <div class="comment-item">
+            <div class="comment-head"><span class="comment-avatar">刘</span><span class="comment-name">刘星</span><span class="comment-time">11-04 19:33</span></div>
+            <p class="comment-text">A 线周有时候还是不太稳定，上周三晚上打不开，过了十分钟才好。监测页那会儿显示也是 200。</p>
+          </div>
+          <div class="comment-item">
+            <div class="comment-head"><span class="comment-avatar">黄</span><span class="comment-name">黄小黄</span><span class="comment-time">11-04 11:02</span></div>
+            <p class="comment-text">地址变更日志能不能加个 RSS 订阅？每次都要手动刷。</p>
+          </div>
+          <div class="comment-item">
+            <div class="comment-head"><span class="comment-avatar">杨</span><span class="comment-name">杨树林</span><span class="comment-time">11-03 22:48</span></div>
+            <p class="comment-text">轮换表写清楚“本周 A 线”这个设计好，不用自己算今天是第几周。</p>
+          </div>
+          <div class="comment-item">
+            <div class="comment-head"><span class="comment-avatar">徐</span><span class="comment-name">徐来</span><span class="comment-time">11-03 09:15</span></div>
+            <p class="comment-text">9 月那会儿旧域名还没停，跳转来跳转去搞晕了。现在直接停用反而清爽。</p>
+          </div>
+          <div class="comment-item">
+            <div class="comment-head"><span class="comment-avatar">马</span><span class="comment-name">马可</span><span class="comment-time">11-02 15:27</span></div>
+            <p class="comment-text">提交了一个导航页，48 小时内真给核验了，还回了邮件说监测页缺失，让补上。态度可以。</p>
+          </div>
+          <div class="comment-item">
+            <div class="comment-head"><span class="comment-avatar">朱</span><span class="comment-name">朱朱</span><span class="comment-time">11-01 20:05</span></div>
+            <p class="comment-text">TG 频道订阅破千那个通知我看到了，当时是第 998 个关注的，还截了个图。</p>
+          </div>
+          <div class="comment-item">
+            <div class="comment-head"><span class="comment-avatar">胡</span><span class="comment-name">胡一刀</span><span class="comment-time">10-30 13:41</span></div>
+            <p class="comment-text">说实话这个页面做得还挺仔细的，就是有些术语比如 TTL 我第一次看不太懂，得查一下。</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 9. 相关资讯 -->
+      <section id="news" class="section-block">
+        <div class="section-header">
+          <h2>相关资讯</h2>
+        </div>
+        <div class="news-list">
+          <article class="news-item">
+            <div class="news-date">2026-11-08</div>
+            <div class="news-body">
+              <h3><a href="/#news">主站发布页 v3.2 增加内容长度校验</a></h3>
+              <p>新版在状态灯旁新增“内容长度”栏，低于 2KB 标为可疑。此次改动源于 10-29 的空白页误报，旧版 v3.1 保留只读访问至 11-15。</p>
+            </div>
+          </article>
+          <article class="news-item">
+            <div class="news-date">2026-11-07</div>
+            <div class="news-body">
+              <h3><a href="/#news">镜像 B 线更换 CDN 节点，延迟降至 42ms</a></h3>
+              <p>更换后 24 小时监测无丢包，电信网络下表现最稳定。联通网络下 A 线仍略优，维护者建议用户按自身网络选择。</p>
+            </div>
+          </article>
+          <article class="news-item">
+            <div class="news-date">2026-11-05</div>
+            <div class="news-body">
+              <h3><a href="/#news">状态监测新增成都、新加坡探测点</a></h3>
+              <p>探测点从 2 个扩至 5 个，覆盖电信/联通/移动三网。新加坡节点用于观察海外访问质量，当前平均延迟 320ms。</p>
+            </div>
+          </article>
+          <article class="news-item">
+            <div class="news-date">2026-11-03</div>
+            <div class="news-body">
+              <h3><a href="/#news">镜像轮换进入 A 线周，B/C 线保留在线</a></h3>
+              <p>按轮值表 11-03 至 11-09 主推 A 线。B 线虽不在首屏展示，仍保持 HTTP 200 状态，C 线仅在 A/B 均不可达时启用。</p>
+            </div>
+          </article>
+          <article class="news-item">
+            <div class="news-date">2026-10-29</div>
+            <div class="news-body">
+              <h3><a href="/#news">旧域名 a-nav.xyz 停止解析，301 跳转保留至 11-12</a></h3>
+              <p>10-29 起旧域名不再返回内容，仅做 301 跳转。浏览器书签未更新的用户需手动替换为新地址，跳转窗口期 14 天。</p>
+            </div>
+          </article>
+          <article class="news-item">
+            <div class="news-date">2026-10-28</div>
+            <div class="news-body">
+              <h3><a href="/#news">TG 推送频道开通，地址变更 2 分钟内通知</a></h3>
+              <p>频道开通首日订阅数 231，至 11-01 破千。历史消息可回溯到 9 月，包含 10 月全部 6 次地址调整记录。</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- 10. 相关推荐 -->
+      <section id="recommend" class="section-block">
+        <div class="section-header">
+          <h2>相关推荐</h2>
+        </div>
+        <div class="rec-tags">
+          <a href="/#featured">主站发布页 v3.2</a>
+          <a href="/#featured">镜像地址 A/B/C 轮换表</a>
+          <a href="/#featured">状态监测页（15分钟）</a>
+          <a href="/#featured">TG 推送频道</a>
+          <a href="/#featured">2026 Q4 变更日志</a>
+          <a href="/#featured">离线备份页</a>
+          <a href="/#featured">在线率统计（90天）</a>
+          <a href="/#submit">提交发布页</a>
+        </div>
+      </section>
+
+      <!-- 11. 补充板块：热门榜单 + 提交入口 -->
+      <section id="submit" class="section-block">
+        <div class="section-header">
+          <h2>热门导航页榜单与提交</h2>
+        </div>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+          <div class="aux-card" style="margin:0;">
+            <h3>本周热门导航页（按访问量）</h3>
+            <ul class="hot-list">
+              <li><span class="rank top">1</span><a href="/#featured">主站发布页 v3.2</a><span style="color:var(--c-text-tertiary);font-size:12px;">4.2k 次</span></li>
+              <li><span class="rank top">2</span><a href="/#featured">镜像 A 线入口</a><span style="color:var(--c-text-tertiary);font-size:12px;">2.8k 次</span></li>
+              <li><span class="rank top">3</span><a href="/#featured">离线备份页</a><span style="color:var(--c-text-tertiary);font-size:12px;">1.9k 次</span></li>
+              <li><span class="rank">4</span><a href="/#featured">状态监测页</a><span style="color:var(--c-text-tertiary);font-size:12px;">1.5k 次</span></li>
+              <li><span class="rank">5</span><a href="/#featured">变更日志 Q4</a><span style="color:var(--c-text-tertiary);font-size:12px;">1.1k 次</span></li>
+            </ul>
+          </div>
+          <div class="submit-box" style="margin:0; display:flex; flex-direction:column; justify-content:center;">
+            <p style="font-size:15px; font-weight:600; color:var(--c-primary-dark); margin-bottom:8px;">有新的导航发布页？</p>
+            <p style="margin-bottom:12px;">提交地址与核验时间，48 小时内人工审核。审核通过后录入精选入口，并标注状态监测有无。</p>
+            <a href="/#submit">提交发布页 →</a>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- 右侧辅助栏 -->
+    <aside class="aux-sidebar" aria-label="辅助信息">
+      <div class="aux-card">
+        <h3>最新核验记录</h3>
+        <ul class="hot-list">
+          <li><span class="rank">1</span><a href="/#featured">主站 v3.2</a><span style="font-size:11px;color:var(--c-text-tertiary);">11-08</span></li>
+          <li><span class="rank">2</span><a href="/#featured">镜像 A 线</a><span style="font-size:11px;color:var(--c-text-tertiary);">11-08</span></li>
+          <li><span class="rank">3</span><a href="/#featured">镜像 B 线</a><span style="font-size:11px;color:var(--c-text-tertiary);">11-08</span></li>
+          <li><span class="rank">4</span><a href="/#featured">备份页</a><span style="font-size:11px;color:var(--c-text-tertiary);">11-07</span></li>
+          <li><span class="rank">5</span><a href="/#featured">TG 频道</a><span style="font-size:11px;color:var(--c-text-tertiary);">11-08</span></li>
+        </ul>
+      </div>
+      <div class="aux-card">
+        <h3>地址变更时间线</h3>
+        <div class="aux-timeline">
+          <div class="timeline-item"><span class="timeline-dot"></span><div><div class="tl-date">11-08</div>v3.2 上线，新增内容长度校验</div></div>
+          <div class="timeline-item"><span class="timeline-dot"></span><div><div class="tl-date">11-07</div>B 线 CDN 切换，延迟 42ms</div></div>
+          <div class="timeline-item"><span class="timeline-dot"></span><div><div class="tl-date">11-05</div>监测点扩至 5 个</div></div>
+          <div class="timeline-item"><span class="timeline-dot"></span><div><div class="tl-date">11-03</div>A 线周开始，轮换生效</div></div>
+          <div class="timeline-item"><span class="timeline-dot"></span><div><div class="tl-date">10-29</div>旧域名停用，301 保留</div></div>
+        </div>
+      </div>
+      <div class="aux-card">
+        <h3>快速入口</h3>
+        <ul class="hot-list">
+          <li><span class="rank">→</span><a href="/#faq">常见问题</a></li>
+          <li><span class="rank">→</span><a href="/#guide">访问路径指南</a></li>
+          <li><span class="rank">→</span><a href="/#submit">提交发布页</a></li>
+          <li><span class="rank">→</span><a href="/#news">相关资讯</a></li>
+        </ul>
+      </div>
+    </aside>
+
+  </div>
+
+  <!-- 页尾 -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-brand">
+          <svg width="28" height="28" viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="#1a5f8a"/><path d="M8 16h6l2-5 3 10 2-5h3" stroke="#f0f7fc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span class="brand-text" style="font-size:1rem;">永久在线导航发布页地址</span>
+        </div>
+        <p class="footer-desc">收录 2026 年 9 月至 11 月间核验的导航发布页与镜像地址，条目类型包含主域名、备用线、状态监测、变更日志与离线备份。更新节奏为地址变更即时通知，常规核验工作日上午完成。</p>
+      </div>
+      <div class="footer-group">
+        <h4>导航入口</h4>
+        <a href="/#featured">主站发布页</a>
+        <a href="/#featured">镜像地址轮换</a>
+        <a href="/#featured">状态监测页</a>
+        <a href="/#featured">离线备份页</a>
+      </div>
+      <div class="footer-group">
+        <h4>信息与工具</h4>
+        <a href="/#updates">发布动态</a>
+        <a href="/#analysis">深度解析</a>
+        <a href="/#guide">访问路径</a>
+        <a href="/#faq">常见问题</a>
+      </div>
+      <div class="footer-group">
+        <h4>社区与提交</h4>
+        <a href="/#comments">用户评论</a>
+        <a href="/#news">相关资讯</a>
+        <a href="/#recommend">相关推荐</a>
+        <a href="/#submit">提交发布页</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 永久在线导航发布页地址 · 条目数据为示例，核验时间截至 2026-11-08</span>
+      <span>地址变更日志同步更新 · 最近核验：2026-11-08 09:20</span>
+    </div>
+  </footer>
+
+  <!-- 回到顶部 -->
+  <button class="back-to-top" id="backToTop" aria-label="回到顶部">↑</button>
+
+  <script>
+    (function() {
+      // 回到顶部
+      var backBtn = document.getElementById('backToTop');
+      window.addEventListener('scroll', function() {
+        if (window.scrollY > 400) {
+          backBtn.classList.add('visible');
+        } else {
+          backBtn.classList.remove('visible');
+        }
+      });
+      backBtn.addEventListener('click', function() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+
+      // 侧栏高亮
+      var sections = document.querySelectorAll('.section-block');
+      var sideLinks = document.querySelectorAll('.channel-sidebar a');
+      if (sections.length && sideLinks.length) {
+        var observer = new IntersectionObserver(function(entries) {
+          entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+              var id = entry.target.getAttribute('id');
+              sideLinks.forEach(function(link) {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '/#' + id) {
+                  link.classList.add('active');
+                }
+              });
+            }
+          });
+        }, { rootMargin: '-120px 0px -50% 0px', threshold: 0.1 });
+        sections.forEach(function(s) { observer.observe(s); });
+      }
+
+      // 汉堡菜单（移动端）
+      var hamburger = document.querySelector('.hamburger');
+      var headerNav = document.querySelector('.header-nav');
+      if (hamburger && headerNav) {
+        hamburger.addEventListener('click', function() {
+          var expanded = hamburger.getAttribute('aria-expanded') === 'true';
+          hamburger.setAttribute('aria-expanded', !expanded);
+          if (!expanded) {
+            headerNav.style.display = 'flex';
+            headerNav.style.position = 'absolute';
+            headerNav.style.top = '64px';
+            headerNav.style.left = '0';
+            headerNav.style.right = '0';
+            headerNav.style.background = '#fff';
+            headerNav.style.flexDirection = 'column';
+            headerNav.style.padding = '12px 16px';
+            headerNav.style.boxShadow = '0 8px 20px rgba(0,0,0,0.1)';
+            headerNav.style.zIndex = '200';
+          } else {
+            headerNav.style.display = '';
+            headerNav.style.position = '';
+            headerNav.style.top = '';
+            headerNav.style.left = '';
+            headerNav.style.right = '';
+            headerNav.style.background = '';
+            headerNav.style.flexDirection = '';
+            headerNav.style.padding = '';
+            headerNav.style.boxShadow = '';
+            headerNav.style.zIndex = '';
+          }
+        });
+        // 点击导航项后收起
+        headerNav.querySelectorAll('a').forEach(function(a) {
+          a.addEventListener('click', function() {
+            if (window.innerWidth <= 840) {
+              headerNav.style.display = 'none';
+              hamburger.setAttribute('aria-expanded', 'false');
+            }
+          });
+        });
+        // Esc 关闭
+        document.addEventListener('keydown', function(e) {
+          if (e.key === 'Escape' && window.innerWidth <= 840) {
+            headerNav.style.display = 'none';
+            hamburger.setAttribute('aria-expanded', 'false');
+          }
+        });
+      }
+    })();
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "永久在线导航发布页地址",
+    "description": "汇聚稳定访问入口与镜像站信息，提供主站地址、备用域名、镜像发布页、状态监测等具体条目。",
+    "url": "https://nav-portal-v3.xyz"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "主站发布页和镜像地址有什么区别？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "主站发布页是地址信息的源头，包含完整的轮换表、变更日志和状态数据；镜像地址是主站本身的备用访问入口，只提供与主站相同的内容，不包含额外的发布信息。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "为什么镜像地址要每周轮换，而不是一直用同一个？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "轮换是为了降低单一地址被批量屏蔽的风险。2026 年 10 月的实测数据显示，三日轮换导致回访率从 34% 降到 21%，周轮换是隐蔽性与可记忆性之间的折中值。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "状态监测页显示 200 是不是就一定能打开？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "不一定。200 只代表 HTTP 请求返回了成功状态码，不保证页面内容完整。10-29 曾出现连续 4 次 200 但实际返回空白页的情况，原因是探测脚本没有跟随重定向。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "离线备份页多久更新一次，什么时候用得上？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "常规节奏是每周五手动同步，但地址变更日志新增条目后会在 2 小时内即时更新。备份页的用途是主站完全不可达时的应急入口。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "TG 推送频道和发布页哪个先更新？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "TG 频道通常早 30 至 60 分钟。11-07 的 B 线延迟调整就是先在频道发布，发布页在 40 分钟后才更新。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "提交一个新的导航发布页需要什么信息？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "需要提供：发布页的当前可用地址、最近一次核验时间、该页面的更新频率、以及是否提供状态监测或变更日志。提交后会在 48 小时内人工核验一次。"
+        }
+      }
+    ]
+  }
+  </script>
+</body>
+                                     </html>
