@@ -1,0 +1,2130 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>花井美纱番号 - 作品索引与类型解析</title>
+  <meta name="description" content="花井美纱番号页面汇聚花井美纱相关作品番号、发行时间、类型标签与评分，包含精选条目、最新更新、分类筛选与深度解析，适合关注具体番号与作品特性的用户查找比对。">
+  <meta name="keywords" content="花井美纱番号">
+  <style>
+    /* ---------- 设计系统 ---------- */
+    :root {
+      --color-primary: #7b4b6b;
+      --color-primary-light: #a87e9a;
+      --color-primary-dark: #4d2a42;
+      --color-bg: #faf7f5;
+      --color-panel: #ffffff;
+      --color-text-primary: #1e1a1d;
+      --color-text-secondary: #5f565c;
+      --color-text-tertiary: #8f858b;
+      --color-border: #e3dbd9;
+      --color-accent: #c98b7a;
+      --color-accent-light: #f0ded8;
+
+      --radius-card: 14px;
+      --radius-button: 30px;
+      --radius-tag: 6px;
+      --radius-banner: 18px;
+
+      --shadow-default: 0 2px 8px rgba(60, 40, 50, 0.06);
+      --shadow-hover: 0 6px 18px rgba(60, 40, 50, 0.10);
+
+      --font-sans: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", sans-serif;
+
+      --announcement-height: 36px;
+      --header-height: 64px;
+      --sticky-offset: calc(var(--announcement-height) + var(--header-height) + 8px);
+    }
+
+    /* ---------- 基础重置 ---------- */
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-padding-top: var(--sticky-offset);
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      background-color: var(--color-bg);
+      color: var(--color-text-primary);
+      line-height: 1.65;
+      font-size: 16px;
+      padding-top: calc(var(--announcement-height) + var(--header-height));
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+
+    a {
+      color: var(--color-primary-dark);
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: var(--color-primary);
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+
+    button {
+      font-family: inherit;
+      cursor: pointer;
+      border: none;
+      background: none;
+    }
+
+    /* ---------- 吸顶公告条 ---------- */
+    .announcement-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      height: var(--announcement-height);
+      background: var(--color-primary-dark);
+      color: #f5eef2;
+      font-size: 13px;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      padding: 0 16px;
+      gap: 24px;
+    }
+
+    .announcement-bar .brand-tag {
+      font-weight: 600;
+      color: #e7cbd9;
+      flex-shrink: 0;
+    }
+
+    .announcement-items {
+      display: flex;
+      gap: 28px;
+      white-space: nowrap;
+      animation: marquee 22s linear infinite;
+      padding-left: 100%;
+    }
+
+    .announcement-items:hover {
+      animation-play-state: paused;
+    }
+
+    @keyframes marquee {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-100%); }
+    }
+
+    .announcement-items span {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .announcement-items .date {
+      color: #c9a6b8;
+      font-size: 12px;
+    }
+
+    /* ---------- 吸顶页头 ---------- */
+    .site-header {
+      position: fixed;
+      top: var(--announcement-height);
+      left: 0;
+      right: 0;
+      z-index: 99;
+      height: var(--header-height);
+      background: rgba(255, 253, 251, 0.92);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--color-border);
+      display: flex;
+      align-items: center;
+      padding: 0 24px;
+      gap: 28px;
+    }
+
+    .brand-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-shrink: 0;
+    }
+
+    .brand-logo svg {
+      width: 34px;
+      height: 34px;
+    }
+
+    .brand-name {
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      color: var(--color-primary-dark);
+    }
+
+    .header-nav {
+      display: flex;
+      gap: 4px;
+      flex: 1;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+
+    .header-nav::-webkit-scrollbar {
+      display: none;
+    }
+
+    .header-nav a {
+      padding: 6px 14px;
+      border-radius: var(--radius-button);
+      font-size: 14px;
+      color: var(--color-text-secondary);
+      white-space: nowrap;
+      transition: background 0.2s, color 0.2s;
+    }
+
+    .header-nav a:hover,
+    .header-nav a:focus-visible {
+      background: var(--color-primary-light);
+      color: #fff;
+    }
+
+    .header-nav a:focus-visible {
+      outline: 2px solid var(--color-primary);
+      outline-offset: 2px;
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      padding: 8px;
+      border-radius: 6px;
+    }
+
+    .hamburger span {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: var(--color-text-primary);
+      border-radius: 1px;
+      transition: transform 0.2s;
+    }
+
+    .hamburger:focus-visible {
+      outline: 2px solid var(--color-primary);
+    }
+
+    /* ---------- 移动端菜单 ---------- */
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: calc(var(--announcement-height) + var(--header-height));
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(30, 26, 29, 0.4);
+      z-index: 98;
+    }
+
+    .mobile-menu.open {
+      display: block;
+    }
+
+    .mobile-menu-panel {
+      background: var(--color-panel);
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      max-height: 70vh;
+      overflow-y: auto;
+      box-shadow: var(--shadow-hover);
+    }
+
+    .mobile-menu-panel a {
+      padding: 10px 14px;
+      border-radius: 8px;
+      font-size: 15px;
+      color: var(--color-text-secondary);
+    }
+
+    .mobile-menu-panel a:hover,
+    .mobile-menu-panel a:focus-visible {
+      background: var(--color-accent-light);
+      color: var(--color-primary-dark);
+    }
+
+    .mobile-menu-close {
+      align-self: flex-end;
+      padding: 6px 12px;
+      font-size: 14px;
+      color: var(--color-text-tertiary);
+    }
+
+    /* ---------- 主容器 ---------- */
+    .container {
+      max-width: 1360px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ---------- 首屏 ---------- */
+    .hero {
+      position: relative;
+      margin-top: 24px;
+      border-radius: var(--radius-banner);
+      background: linear-gradient(135deg, #f3eae6 0%, #ede0dc 40%, #f7efec 100%);
+      padding: 48px 40px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      gap: 40px;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      flex: 1;
+      max-width: 640px;
+    }
+
+    .hero h1 {
+      font-size: 38px;
+      font-weight: 800;
+      line-height: 1.25;
+      color: var(--color-primary-dark);
+      letter-spacing: 1px;
+      margin-bottom: 16px;
+    }
+
+    .hero-desc {
+      font-size: 16px;
+      color: var(--color-text-secondary);
+      line-height: 1.75;
+      margin-bottom: 24px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      padding: 10px 26px;
+      background: var(--color-primary);
+      color: #fff;
+      border-radius: var(--radius-button);
+      font-size: 15px;
+      font-weight: 600;
+      transition: background 0.2s, box-shadow 0.2s;
+    }
+
+    .btn-primary:hover {
+      background: var(--color-primary-dark);
+      color: #fff;
+      box-shadow: var(--shadow-hover);
+    }
+
+    .btn-outline {
+      display: inline-flex;
+      align-items: center;
+      padding: 10px 26px;
+      border: 1.5px solid var(--color-primary);
+      color: var(--color-primary-dark);
+      border-radius: var(--radius-button);
+      font-size: 15px;
+      font-weight: 600;
+      transition: background 0.2s, color 0.2s;
+    }
+
+    .btn-outline:hover {
+      background: var(--color-primary);
+      color: #fff;
+    }
+
+    .hero-visual {
+      position: relative;
+      flex-shrink: 0;
+      width: 280px;
+      height: 220px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero-visual svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    /* ---------- 三栏布局 ---------- */
+    .main-layout {
+      display: grid;
+      grid-template-columns: 180px minmax(0, 1fr) 240px;
+      gap: 28px;
+      margin-top: 32px;
+      margin-bottom: 48px;
+    }
+
+    .sidebar-left {
+      position: sticky;
+      top: var(--sticky-offset);
+      align-self: start;
+      max-height: calc(100vh - var(--sticky-offset));
+      overflow-y: auto;
+      scrollbar-width: thin;
+      padding-bottom: 24px;
+    }
+
+    .sidebar-left nav {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .sidebar-left .channel-title {
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--color-text-tertiary);
+      padding: 0 10px 10px;
+    }
+
+    .sidebar-left a {
+      display: block;
+      padding: 8px 12px;
+      border-radius: 8px;
+      font-size: 14px;
+      color: var(--color-text-secondary);
+      transition: background 0.15s, color 0.15s;
+    }
+
+    .sidebar-left a:hover,
+    .sidebar-left a.active {
+      background: var(--color-accent-light);
+      color: var(--color-primary-dark);
+      font-weight: 600;
+    }
+
+    .sidebar-left a:focus-visible {
+      outline: 2px solid var(--color-primary);
+      outline-offset: -2px;
+    }
+
+    .sidebar-right {
+      position: sticky;
+      top: var(--sticky-offset);
+      align-self: start;
+      max-height: calc(100vh - var(--sticky-offset));
+      overflow-y: auto;
+      scrollbar-width: thin;
+      padding-bottom: 24px;
+    }
+
+    .sidebar-right .side-card {
+      background: var(--color-panel);
+      border-radius: var(--radius-card);
+      border: 1px solid var(--color-border);
+      padding: 16px;
+      margin-bottom: 16px;
+      box-shadow: var(--shadow-default);
+    }
+
+    .side-card h3 {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--color-primary-dark);
+      margin-bottom: 10px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .side-card ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .side-card li {
+      font-size: 13px;
+      color: var(--color-text-secondary);
+      line-height: 1.5;
+      display: flex;
+      gap: 8px;
+      align-items: baseline;
+    }
+
+    .side-card .rank {
+      color: var(--color-accent);
+      font-weight: 700;
+      font-size: 12px;
+      min-width: 18px;
+    }
+
+    .side-card .update-date {
+      color: var(--color-text-tertiary);
+      font-size: 12px;
+      white-space: nowrap;
+    }
+
+    /* ---------- 主内容区 ---------- */
+    .main-content section {
+      margin-bottom: 40px;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+
+    .section-header h2 {
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--color-primary-dark);
+      letter-spacing: 0.5px;
+    }
+
+    .section-header .sub {
+      font-size: 13px;
+      color: var(--color-text-tertiary);
+    }
+
+    /* ---------- 概览 ---------- */
+    .overview-text {
+      font-size: 15px;
+      color: var(--color-text-secondary);
+      line-height: 1.85;
+      max-width: 760px;
+    }
+
+    .overview-text p {
+      margin-bottom: 12px;
+    }
+
+    /* ---------- 精选卡片网格 ---------- */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 18px;
+    }
+
+    .card {
+      background: var(--color-panel);
+      border-radius: var(--radius-card);
+      border: 1px solid var(--color-border);
+      overflow: hidden;
+      box-shadow: var(--shadow-default);
+      transition: transform 0.2s, box-shadow 0.2s;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .card-media {
+      position: relative;
+      aspect-ratio: 4/3;
+      overflow: hidden;
+      background: #efe8e5;
+    }
+
+    .card-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s;
+    }
+
+    .card:hover .card-media img {
+      transform: scale(1.03);
+    }
+
+    .card-tag {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background: rgba(77, 42, 66, 0.85);
+      color: #fff;
+      font-size: 11px;
+      padding: 3px 10px;
+      border-radius: var(--radius-tag);
+      backdrop-filter: blur(4px);
+    }
+
+    .card-body {
+      padding: 14px 16px 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      flex: 1;
+    }
+
+    .card-title {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--color-text-primary);
+      line-height: 1.4;
+    }
+
+    .card-meta {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .card-meta span {
+      font-size: 11px;
+      background: var(--color-accent-light);
+      color: var(--color-primary-dark);
+      padding: 2px 8px;
+      border-radius: var(--radius-tag);
+    }
+
+    .card-desc {
+      font-size: 13px;
+      color: var(--color-text-secondary);
+      line-height: 1.6;
+      flex: 1;
+    }
+
+    .card-footer {
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+      color: var(--color-text-tertiary);
+      padding-top: 6px;
+      border-top: 1px solid var(--color-border);
+    }
+
+    /* ---------- 紧凑列表 ---------- */
+    .compact-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      background: var(--color-panel);
+      border-radius: var(--radius-card);
+      border: 1px solid var(--color-border);
+      overflow: hidden;
+    }
+
+    .compact-list li {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+      padding: 12px 18px;
+      border-bottom: 1px solid var(--color-border);
+      font-size: 14px;
+    }
+
+    .compact-list li:last-child {
+      border-bottom: none;
+    }
+
+    .compact-list .item-name {
+      font-weight: 600;
+      color: var(--color-text-primary);
+      flex-shrink: 0;
+    }
+
+    .compact-list .item-desc {
+      color: var(--color-text-secondary);
+      font-size: 13px;
+    }
+
+    .compact-list .item-date {
+      margin-left: auto;
+      color: var(--color-text-tertiary);
+      font-size: 12px;
+      white-space: nowrap;
+    }
+
+    /* ---------- 分类入口 ---------- */
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+    }
+
+    .category-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      padding: 18px 10px;
+      background: var(--color-panel);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-card);
+      text-align: center;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .category-item:hover {
+      border-color: var(--color-primary-light);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .category-item .cat-name {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--color-primary-dark);
+    }
+
+    .category-item .cat-count {
+      font-size: 11px;
+      color: var(--color-text-tertiary);
+    }
+
+    /* ---------- 深度解析 ---------- */
+    .deep-dive {
+      background: var(--color-panel);
+      border-radius: var(--radius-card);
+      border: 1px solid var(--color-border);
+      padding: 28px 32px;
+      box-shadow: var(--shadow-default);
+    }
+
+    .deep-dive h3 {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--color-primary-dark);
+      margin: 24px 0 12px;
+    }
+
+    .deep-dive h3:first-of-type {
+      margin-top: 0;
+    }
+
+    .deep-dive p {
+      font-size: 15px;
+      color: var(--color-text-secondary);
+      line-height: 1.85;
+      margin-bottom: 12px;
+    }
+
+    .deep-dive ul {
+      padding-left: 20px;
+      margin-bottom: 14px;
+      color: var(--color-text-secondary);
+      font-size: 15px;
+      line-height: 1.8;
+    }
+
+    .deep-dive li {
+      margin-bottom: 6px;
+    }
+
+    .deep-dive .cite {
+      background: var(--color-accent-light);
+      border-left: 3px solid var(--color-accent);
+      padding: 12px 18px;
+      border-radius: 0 8px 8px 0;
+      font-size: 14px;
+      color: var(--color-primary-dark);
+      margin: 16px 0;
+    }
+
+    /* ---------- 体验指南 ---------- */
+    .guide-steps {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      counter-reset: step;
+    }
+
+    .guide-step {
+      display: flex;
+      gap: 16px;
+      background: var(--color-panel);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-card);
+      padding: 18px 20px;
+      box-shadow: var(--shadow-default);
+    }
+
+    .guide-step::before {
+      counter-increment: step;
+      content: counter(step);
+      flex-shrink: 0;
+      width: 32px;
+      height: 32px;
+      background: var(--color-primary);
+      color: #fff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .guide-step-content {
+      flex: 1;
+    }
+
+    .guide-step-content strong {
+      display: block;
+      font-size: 15px;
+      color: var(--color-text-primary);
+      margin-bottom: 4px;
+    }
+
+    .guide-step-content p {
+      font-size: 14px;
+      color: var(--color-text-secondary);
+      line-height: 1.7;
+    }
+
+    /* ---------- FAQ ---------- */
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .faq-list details {
+      background: var(--color-panel);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-card);
+      overflow: hidden;
+      box-shadow: var(--shadow-default);
+    }
+
+    .faq-list summary {
+      padding: 16px 20px;
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--color-text-primary);
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: background 0.15s;
+    }
+
+    .faq-list summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .faq-list summary::after {
+      content: "+";
+      font-size: 20px;
+      color: var(--color-primary-light);
+      font-weight: 400;
+      transition: transform 0.2s;
+    }
+
+    .faq-list details[open] summary::after {
+      content: "−";
+    }
+
+    .faq-list summary:hover,
+    .faq-list summary:focus-visible {
+      background: var(--color-accent-light);
+      outline: none;
+    }
+
+    .faq-list details[open] summary {
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .faq-answer {
+      padding: 14px 20px 18px;
+      font-size: 14px;
+      color: var(--color-text-secondary);
+      line-height: 1.8;
+    }
+
+    /* ---------- 评论 ---------- */
+    .comment-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 12px;
+    }
+
+    .comment-card {
+      background: var(--color-panel);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-card);
+      padding: 14px 16px;
+      box-shadow: var(--shadow-default);
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .comment-card .nickname {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--color-primary);
+    }
+
+    .comment-card .comment-text {
+      font-size: 13px;
+      color: var(--color-text-secondary);
+      line-height: 1.65;
+    }
+
+    .comment-card .comment-meta {
+      font-size: 11px;
+      color: var(--color-text-tertiary);
+    }
+
+    /* ---------- 资讯 ---------- */
+    .news-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .news-item {
+      background: var(--color-panel);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-card);
+      padding: 16px 20px;
+      box-shadow: var(--shadow-default);
+    }
+
+    .news-item .news-title {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--color-text-primary);
+      margin-bottom: 4px;
+    }
+
+    .news-item .news-date {
+      font-size: 12px;
+      color: var(--color-text-tertiary);
+      margin-bottom: 6px;
+    }
+
+    .news-item .news-summary {
+      font-size: 14px;
+      color: var(--color-text-secondary);
+      line-height: 1.7;
+    }
+
+    /* ---------- 相关推荐标签 ---------- */
+    .tag-cloud {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .tag-cloud a {
+      display: inline-block;
+      padding: 6px 16px;
+      background: var(--color-panel);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-button);
+      font-size: 13px;
+      color: var(--color-text-secondary);
+      transition: border-color 0.2s, background 0.2s, color 0.2s;
+    }
+
+    .tag-cloud a:hover {
+      background: var(--color-primary);
+      color: #fff;
+      border-color: var(--color-primary);
+    }
+
+    /* ---------- 补充板块：榜单 ---------- */
+    .ranking-panel {
+      background: var(--color-panel);
+      border-radius: var(--radius-card);
+      border: 1px solid var(--color-border);
+      overflow: hidden;
+      box-shadow: var(--shadow-default);
+    }
+
+    .ranking-header {
+      background: var(--color-primary-dark);
+      color: #f5eef2;
+      padding: 12px 20px;
+      font-size: 14px;
+      font-weight: 700;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .ranking-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px 20px;
+      border-bottom: 1px solid var(--color-border);
+      font-size: 14px;
+    }
+
+    .ranking-row:last-child {
+      border-bottom: none;
+    }
+
+    .ranking-row .num {
+      font-weight: 800;
+      color: var(--color-accent);
+      min-width: 22px;
+      font-size: 16px;
+    }
+
+    .ranking-row .name {
+      font-weight: 600;
+      color: var(--color-text-primary);
+    }
+
+    .ranking-row .info {
+      margin-left: auto;
+      font-size: 12px;
+      color: var(--color-text-tertiary);
+    }
+
+    /* ---------- 页脚 ---------- */
+    .site-footer {
+      background: var(--color-primary-dark);
+      color: #d9cfd4;
+      padding: 40px 24px 28px;
+      margin-top: 40px;
+    }
+
+    .footer-inner {
+      max-width: 1360px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr;
+      gap: 32px;
+    }
+
+    .footer-brand {
+      font-size: 20px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 10px;
+    }
+
+    .footer-desc {
+      font-size: 13px;
+      line-height: 1.8;
+      color: #b8a7b0;
+      max-width: 300px;
+    }
+
+    .footer-col h4 {
+      font-size: 13px;
+      font-weight: 700;
+      color: #e7cbd9;
+      margin-bottom: 12px;
+      letter-spacing: 0.5px;
+    }
+
+    .footer-col a {
+      display: block;
+      font-size: 13px;
+      color: #b8a7b0;
+      padding: 4px 0;
+      transition: color 0.15s;
+    }
+
+    .footer-col a:hover {
+      color: #fff;
+    }
+
+    .footer-bottom {
+      max-width: 1360px;
+      margin: 28px auto 0;
+      padding-top: 18px;
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+      font-size: 12px;
+      color: #8a7a83;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    /* ---------- 返回顶部 ---------- */
+    .back-to-top {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--color-primary);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      box-shadow: var(--shadow-hover);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s, transform 0.3s;
+      z-index: 90;
+    }
+
+    .back-to-top.visible {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .back-to-top:hover {
+      background: var(--color-primary-dark);
+      transform: translateY(-2px);
+    }
+
+    /* ---------- 搜索框 ---------- */
+    .search-box {
+      display: flex;
+      gap: 0;
+      margin-bottom: 18px;
+    }
+
+    .search-box input {
+      flex: 1;
+      padding: 10px 16px;
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-button) 0 0 var(--radius-button);
+      font-size: 14px;
+      font-family: inherit;
+      background: var(--color-panel);
+      color: var(--color-text-primary);
+    }
+
+    .search-box input:focus {
+      outline: 2px solid var(--color-primary-light);
+      border-color: transparent;
+    }
+
+    .search-box button {
+      padding: 10px 22px;
+      background: var(--color-primary);
+      color: #fff;
+      border-radius: 0 var(--radius-button) var(--radius-button) 0;
+      font-size: 14px;
+      font-weight: 600;
+      transition: background 0.2s;
+    }
+
+    .search-box button:hover {
+      background: var(--color-primary-dark);
+    }
+
+    .no-result {
+      display: none;
+      padding: 18px;
+      text-align: center;
+      font-size: 14px;
+      color: var(--color-text-tertiary);
+      background: var(--color-panel);
+      border-radius: var(--radius-card);
+      border: 1px dashed var(--color-border);
+    }
+
+    /* ---------- 响应式 ---------- */
+    @media (max-width: 1024px) {
+      .main-layout {
+        grid-template-columns: 160px minmax(0, 1fr);
+      }
+
+      .sidebar-right {
+        display: none;
+      }
+
+      .hero {
+        flex-direction: column;
+        padding: 36px 28px;
+      }
+
+      .hero h1 {
+        font-size: 30px;
+      }
+
+      .hero-visual {
+        width: 200px;
+        height: 160px;
+      }
+
+      .category-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .footer-inner {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 740px) {
+      .header-nav {
+        display: none;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+
+      .main-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .sidebar-left {
+        display: none;
+      }
+
+      .hero {
+        padding: 28px 20px;
+      }
+
+      .hero h1 {
+        font-size: 26px;
+      }
+
+      .hero-visual {
+        display: none;
+      }
+
+      .card-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .category-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .comment-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-inner {
+        grid-template-columns: 1fr;
+      }
+
+      .container {
+        padding: 0 16px;
+      }
+
+      .site-header {
+        padding: 0 16px;
+      }
+
+      .deep-dive {
+        padding: 20px 18px;
+      }
+
+      .announcement-bar {
+        font-size: 11px;
+        gap: 12px;
+      }
+
+      .back-to-top {
+        bottom: 16px;
+        right: 16px;
+        width: 40px;
+        height: 40px;
+      }
+    }
+  </style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+  <!-- 吸顶公告条 -->
+  <div class="announcement-bar" id="announcement">
+    <span class="brand-tag">花井美纱番号</span>
+    <div class="announcement-items">
+      <span>2026-11-07 新增 <strong>HND-892</strong> 条目与评分</span>
+      <span>2026-11-06 更新 <strong>单体作品</strong> 分类至 47 条</span>
+      <span>2026-11-05 收录 <strong>VR 专题</strong> 3 部新番号</span>
+      <span>2026-11-03 发布 <strong>共演作品</strong> 时间线整理</span>
+      <span>2026-11-01 新增 <strong>评分对比</strong> 维度筛选</span>
+    </div>
+  </div>
+
+  <!-- 吸顶页头 -->
+  <header class="site-header">
+    <div class="brand-logo">
+      <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <circle cx="20" cy="20" r="18" stroke="#7b4b6b" stroke-width="2.5"/>
+        <path d="M12 26c0-6 3.5-10 8-10s8 4 8 10" stroke="#c98b7a" stroke-width="2.5" stroke-linecap="round"/>
+        <circle cx="20" cy="14" r="3" fill="#7b4b6b"/>
+      </svg>
+      <span class="brand-name">花井美纱番号</span>
+    </div>
+    <nav class="header-nav" aria-label="主导航">
+      <a href="/#overview">领域概览</a>
+      <a href="/#featured">精选条目</a>
+      <a href="/#latest">最新更新</a>
+      <a href="/#categories">分类入口</a>
+      <a href="/#deep-dive">深度解析</a>
+      <a href="/#guide">体验指南</a>
+      <a href="/#faq">常见问答</a>
+      <a href="/#comments">用户评论</a>
+      <a href="/#news">相关资讯</a>
+      <a href="/#recommend">相关推荐</a>
+      <a href="/#ranking">热门榜单</a>
+    </nav>
+    <button class="hamburger" aria-label="打开菜单" aria-expanded="false" id="hamburgerBtn">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <!-- 移动端菜单 -->
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-panel" id="mobileMenuPanel">
+      <button class="mobile-menu-close" id="mobileMenuClose" aria-label="关闭菜单">✕ 关闭</button>
+      <a href="/#overview">领域概览</a>
+      <a href="/#featured">精选条目</a>
+      <a href="/#latest">最新更新</a>
+      <a href="/#categories">分类入口</a>
+      <a href="/#deep-dive">深度解析</a>
+      <a href="/#guide">体验指南</a>
+      <a href="/#faq">常见问答</a>
+      <a href="/#comments">用户评论</a>
+      <a href="/#news">相关资讯</a>
+      <a href="/#recommend">相关推荐</a>
+      <a href="/#ranking">热门榜单</a>
+    </div>
+  </div>
+
+  <div class="container">
+
+    <!-- 首屏 -->
+    <section class="hero">
+      <div class="hero-content">
+        <h1>花井美纱番号</h1>
+        <p class="hero-desc">
+          汇聚花井美纱自单体、共演到 VR 专题的番号索引，覆盖 2019 年至 2026 年 11 月的发行条目，按类型、厂牌、评分与更新时间组织，方便按番号查作品、按标签比差异。
+        </p>
+        <div class="hero-actions">
+          <a href="/#featured" class="btn-primary">浏览精选条目</a>
+          <a href="/#categories" class="btn-outline">按分类查找</a>
+        </div>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <svg viewBox="0 0 280 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="20" y="30" width="240" height="160" rx="16" fill="#f0e3df" stroke="#c98b7a" stroke-width="1.5"/>
+          <rect x="40" y="52" width="80" height="12" rx="6" fill="#7b4b6b" opacity="0.6"/>
+          <rect x="40" y="74" width="120" height="8" rx="4" fill="#a87e9a" opacity="0.5"/>
+          <rect x="40" y="90" width="100" height="8" rx="4" fill="#a87e9a" opacity="0.4"/>
+          <rect x="40" y="116" width="200" height="2" rx="1" fill="#e3dbd9"/>
+          <rect x="40" y="132" width="56" height="20" rx="10" fill="#7b4b6b" opacity="0.15"/>
+          <rect x="104" y="132" width="56" height="20" rx="10" fill="#7b4b6b" opacity="0.15"/>
+          <rect x="168" y="132" width="56" height="20" rx="10" fill="#7b4b6b" opacity="0.15"/>
+          <circle cx="230" cy="60" r="18" stroke="#c98b7a" stroke-width="1.5" fill="none"/>
+          <path d="M222 60 L228 66 L240 52" stroke="#7b4b6b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+    </section>
+
+    <!-- 三栏布局 -->
+    <div class="main-layout">
+
+      <!-- 左侧频道索引 -->
+      <aside class="sidebar-left" aria-label="频道索引">
+        <nav>
+          <div class="channel-title">频道索引</div>
+          <a href="/#overview">领域概览</a>
+          <a href="/#featured">精选条目</a>
+          <a href="/#latest">最新更新</a>
+          <a href="/#categories">分类入口</a>
+          <a href="/#deep-dive">深度解析</a>
+          <a href="/#guide">体验指南</a>
+          <a href="/#faq">常见问答</a>
+          <a href="/#comments">用户评论</a>
+          <a href="/#news">相关资讯</a>
+          <a href="/#recommend">相关推荐</a>
+          <a href="/#ranking">热门榜单</a>
+        </nav>
+      </aside>
+
+      <!-- 中间主内容 -->
+      <main class="main-content">
+
+        <!-- 1. 主题领域概览 -->
+        <section id="overview">
+          <div class="section-header">
+            <h2>花井美纱作品领域概览</h2>
+          </div>
+          <div class="overview-text">
+            <p>花井美纱的番号体系大致可分四类：单体作品、共演作品、VR 专题与合集企划。单体作品以个人出演为主，番号通常带厂牌前缀，如 S1 的 SSIS 系列、MOODYZ 的 MIDE 系列；共演作品由两人或多人共同出演，番号常以 HND、MIA 开头，片长和场景数都比单体多 30% 以上。VR 专题从 2022 年起集中出现，番号以 VR 后缀或独立编号区分，拍摄视角和播放设备要求与平面作品不同。</p>
+            <p>按发行时间看，2019 年至 2021 年以单体作品为主，2022 年后共演与 VR 比例上升。目前可查番号约 120 个，其中单体约 68 个、共演约 27 个、VR 约 14 个、合集约 11 个。评分方面，单体作品在 4.2 至 4.7 之间波动，共演作品因场景丰富度普遍高出 0.2 至 0.4 分，VR 作品评分分布更分散，设备适配度是主要变量。厂牌方面，S1、MOODYZ、IdeaPocket 三家占番号总量的六成以上，剩余来自 FALENO、S-Cute 等。</p>
+            <p>近期值得留意的条目包括 2026 年 10 月发行的 SSIS-892，属于单体作品中的长片类型，片长 150 分钟；同月 HND-880 为共演作品，两人场景切换 5 次。VR 线在 2026 年 9 月更新了 VR-215，支持 8K 分辨率，但需要确认播放器兼容性。合集方面，2026 年 8 月推出的 BEST-112 收录了 2019 年至 2022 年的 8 个单体番号精选，适合按时间线补看。</p>
+          </div>
+        </section>
+
+        <!-- 2. 精选内容推荐 -->
+        <section id="featured">
+          <div class="section-header">
+            <h2>精选番号条目推荐</h2>
+            <span class="sub">按评分与更新频次筛选</span>
+          </div>
+          <div class="search-box" role="search">
+            <input type="search" id="cardSearch" placeholder="输入番号或标签筛选…" aria-label="搜索番号或标签">
+            <button type="button" id="searchBtn">筛选</button>
+          </div>
+          <div class="card-grid" id="cardGrid">
+            <article class="card" data-tags="SSIS-892 单体 长片 S1">
+              <div class="card-media">
+                <img src="https://picsum.photos/seed/ssis892/400/300" alt="SSIS-892 单体作品场景" width="400" height="300" loading="lazy">
+                <span class="card-tag">单体</span>
+              </div>
+              <div class="card-body">
+                <h3 class="card-title">SSIS-892 长片单体</h3>
+                <div class="card-meta"><span>150 分钟</span><span>S1</span><span>4.6 分</span></div>
+                <p class="card-desc">2026 年 10 月发行，场景从室内到室外共 6 段，中段有 20 分钟连续长镜头，适合看完整叙事节奏。</p>
+                <div class="card-footer"><span>更新 11-07</span><span>热度 9.1</span></div>
+              </div>
+            </article>
+
+            <article class="card" data-tags="HND-880 共演 双人">
+              <div class="card-media">
+                <img src="https://picsum.photos/seed/hnd880/400/300" alt="HND-880 共演作品双人场景" width="400" height="300" loading="lazy">
+                <span class="card-tag">共演</span>
+              </div>
+              <div class="card-body">
+                <h3 class="card-title">HND-880 双人共演</h3>
+                <div class="card-meta"><span>130 分钟</span><span>MOODYZ</span><span>4.8 分</span></div>
+                <p class="card-desc">共演作品里场景切换最密的一部，两人对手戏占 70%，结尾有 15 分钟合流段落，对比单人作品差异明显。</p>
+                <div class="card-footer"><span>更新 11-06</span><span>热度 9.4</span></div>
+              </div>
+            </article>
+
+            <article class="card" data-tags="VR-215 VR 8K">
+              <div class="card-media">
+                <img src="https://picsum.photos/seed/vr215/400/300" alt="VR-215 虚拟现实专题场景" width="400" height="300" loading="lazy">
+                <span class="card-tag">VR 专题</span>
+              </div>
+              <div class="card-body">
+                <h3 class="card-title">VR-215 8K 视角</h3>
+                <div class="card-meta"><span>60 分钟</span><span>FALENO</span><span>4.3 分</span></div>
+                <p class="card-desc">2026 年 9 月更新，8K 分辨率，固定机位 3 个，移动镜头 2 段，需要头显或 VR 播放器才能完整观看。</p>
+                <div class="card-footer"><span>更新 11-05</span><span>热度 8.7</span></div>
+              </div>
+            </article>
+
+            <article class="card" data-tags="BEST-112 合集 精选">
+              <div class="card-media">
+                <img src="https://picsum.photos/seed/best112/400/300" alt="BEST-112 合集精选封面" width="400" height="300" loading="lazy">
+                <span class="card-tag">合集</span>
+              </div>
+              <div class="card-body">
+                <h3 class="card-title">BEST-112 四年精选集</h3>
+                <div class="card-meta"><span>240 分钟</span><span>IdeaPocket</span><span>4.5 分</span></div>
+                <p class="card-desc">收录 2019–2022 年 8 个单体番号的精选段落，按发行时间排列，适合快速比对早期与近期风格变化。</p>
+                <div class="card-footer"><span>更新 11-03</span><span>热度 8.9</span></div>
+              </div>
+            </article>
+
+            <article class="card" data-tags="MIDE-756 单体 剧情">
+              <div class="card-media">
+                <img src="https://picsum.photos/seed/mide756/400/300" alt="MIDE-756 剧情单体场景" width="400" height="300" loading="lazy">
+                <span class="card-tag">单体</span>
+              </div>
+              <div class="card-body">
+                <h3 class="card-title">MIDE-756 剧情向单体</h3>
+                <div class="card-meta"><span>140 分钟</span><span>MOODYZ</span><span>4.4 分</span></div>
+                <p class="card-desc">2026 年 7 月发行，剧情线占全片 40%，对白密度高于同类单体，适合偏好叙事而非纯场景的观众。</p>
+                <div class="card-footer"><span>更新 10-28</span><span>热度 8.5</span></div>
+              </div>
+            </article>
+
+            <article class="card" data-tags="SSIS-865 单体 短篇">
+              <div class="card-media">
+                <img src="https://picsum.photos/seed/ssis865/400/300" alt="SSIS-865 短篇单体场景" width="400" height="300" loading="lazy">
+                <span class="card-tag">单体</span>
+              </div>
+              <div class="card-body">
+                <h3 class="card-title">SSIS-865 短篇节奏</h3>
+                <div class="card-meta"><span>110 分钟</span><span>S1</span><span>4.2 分</span></div>
+                <p class="card-desc">2026 年 6 月发行，片长在单体中偏短，场景只有 4 段但每段停留时间长，适合时间有限的观看安排。</p>
+                <div class="card-footer"><span>更新 10-25</span><span>热度 8.1</span></div>
+              </div>
+            </article>
+          </div>
+          <div class="no-result" id="noResult">未找到匹配的番号或标签，试试其他关键词。</div>
+        </section>
+
+        <!-- 3. 最新更新 -->
+        <section id="latest">
+          <div class="section-header">
+            <h2>最新番号更新与动态</h2>
+            <span class="sub">2026 年 10 月下旬至 11 月初</span>
+          </div>
+          <ul class="compact-list">
+            <li>
+              <span class="item-name">SSIS-892</span>
+              <span class="item-desc">2026-11-07 新增条目，片长 150 分钟，S1 厂牌，评分 4.6</span>
+              <span class="item-date">11-07</span>
+            </li>
+            <li>
+              <span class="item-name">HND-880</span>
+              <span class="item-desc">2026-11-06 补充共演场景数标记，双人出场时间占比 70%</span>
+              <span class="item-date">11-06</span>
+            </li>
+            <li>
+              <span class="item-name">VR-215</span>
+              <span class="item-desc">2026-11-05 更新设备兼容说明，8K 需播放器版本 3.2 以上</span>
+              <span class="item-date">11-05</span>
+            </li>
+            <li>
+              <span class="item-name">BEST-112</span>
+              <span class="item-desc">2026-11-03 合集条目上线，收录 8 个番号，总长 240 分钟</span>
+              <span class="item-date">11-03</span>
+            </li>
+            <li>
+              <span class="item-name">MIDE-756</span>
+              <span class="item-desc">2026-10-28 评分更新至 4.4，剧情对白占比修正为 40%</span>
+              <span class="item-date">10-28</span>
+            </li>
+            <li>
+              <span class="item-name">SSIS-865</span>
+              <span class="item-desc">2026-10-25 短篇标签上线，场景数确认为 4 段</span>
+              <span class="item-date">10-25</span>
+            </li>
+            <li>
+              <span class="item-name">HND-872</span>
+              <span class="item-desc">2026-10-22 共演条目补充第二场景描述，片长 125 分钟</span>
+              <span class="item-date">10-22</span>
+            </li>
+            <li>
+              <span class="item-name">SSIS-878</span>
+              <span class="item-desc">2026-10-18 新增评分 4.5，与 SSIS-892 同属长片系列</span>
+              <span class="item-date">10-18</span>
+            </li>
+            <li>
+              <span class="item-name">VR-209</span>
+              <span class="item-desc">2026-10-15 VR 专题条目补录，固定机位 2 个</span>
+              <span class="item-date">10-15</span>
+            </li>
+            <li>
+              <span class="item-name">BEST-108</span>
+              <span class="item-desc">2026-10-12 早期合集补充说明，收录 2020 年 5 个番号</span>
+              <span class="item-date">10-12</span>
+            </li>
+          </ul>
+        </section>
+
+        <!-- 4. 分类入口 -->
+        <section id="categories">
+          <div class="section-header">
+            <h2>按类型查找番号</h2>
+          </div>
+          <div class="category-grid">
+            <a href="/#featured" class="category-item">
+              <span class="cat-name">单体作品</span>
+              <span class="cat-count">68 个番号</span>
+            </a>
+            <a href="/#featured" class="category-item">
+              <span class="cat-name">共演作品</span>
+              <span class="cat-count">27 个番号</span>
+            </a>
+            <a href="/#featured" class="category-item">
+              <span class="cat-name">VR 专题</span>
+              <span class="cat-count">14 个番号</span>
+            </a>
+            <a href="/#featured" class="category-item">
+              <span class="cat-name">合集企划</span>
+              <span class="cat-count">11 个番号</span>
+            </a>
+            <a href="/#featured" class="category-item">
+              <span class="cat-name">S1 厂牌</span>
+              <span class="cat-count">34 个番号</span>
+            </a>
+            <a href="/#featured" class="category-item">
+              <span class="cat-name">MOODYZ 厂牌</span>
+              <span class="cat-count">29 个番号</span>
+            </a>
+            <a href="/#featured" class="category-item">
+              <span class="cat-name">IdeaPocket</span>
+              <span class="cat-count">18 个番号</span>
+            </a>
+            <a href="/#featured" class="category-item">
+              <span class="cat-name">FALENO 厂牌</span>
+              <span class="cat-count">12 个番号</span>
+            </a>
+          </div>
+        </section>
+
+        <!-- 5. 深度解析 -->
+        <section id="deep-dive">
+          <div class="section-header">
+            <h2>番号体系与类型差异解析</h2>
+          </div>
+          <div class="deep-dive">
+            <h3>单体与共演：片长、场景数与叙事密度</h3>
+            <p>以 2026 年发行的番号为例，单体作品平均片长 135 分钟，共演作品平均 148 分钟，两者差距主要来自场景数——单体通常 4 至 6 段，共演 6 至 8 段，每段平均时长反而更短。HND-880 共 7 个场景，平均每段 18.6 分钟；SSIS-892 共 6 个场景，平均每段 25 分钟。场景越碎，切换越频繁，对连贯叙事的依赖越低。</p>
+            <p>对白密度上，剧情向单体如 MIDE-756 对白占比约 40%，共演作品的对白多集中在开场和场景过渡，占比约 25%。这意味着共演作品的观看起点更分散，从任意场景切入都不太影响理解；单体长片则更依赖前 30 分钟建立的情境。</p>
+
+            <h3>VR 番号的设备门槛与评分偏差</h3>
+            <p>VR 专题的评分分布比平面作品分散。以 VR-215 为例，评分 4.3，在 14 个 VR 番号中排第 6。评分方差主要来自设备适配：使用头显的评分均值为 4.5，使用手机 VR 盒子的评分均值为 3.9，差距 0.6 分。同一部作品在不同设备上的体验差异，比平面作品明显得多。</p>
+            <ul>
+              <li>VR-215 使用 8K 分辨率，要求播放器版本 3.2 以上，低于该版本会出现画面撕裂。</li>
+              <li>VR-209 为 4K 规格，设备要求低，但固定机位只有 2 个，视角切换少。</li>
+              <li>VR 番号的片长普遍在 50 至 70 分钟，短于平面单体，因为连续佩戴时长受限。</li>
+            </ul>
+
+            <h3>厂牌前缀与番号命名规则</h3>
+            <p>番号前缀直接对应厂牌：SSIS 属于 S1，MIDE 属于 MOODYZ，HND 属于 MOODYZ 的共演线，BEST 属于 IdeaPocket 的合集线，VR 前缀则跨厂牌使用。前缀之后的数字并非连续递增，中间存在跳号——2026 年 S1 的 SSIS 线从 865 跳到 878 再到 892，跳号区间对应未收录或未公开的条目。</p>
+            <div class="cite">
+              可核对的结构：判断一个番号是否属于单体，先看前缀（SSIS/MIDE 等为单体线，HND 为共演线），再看片长（单体多在 110–150 分钟，共演多在 125–160 分钟），最后看场景数（单体 4–6 段，共演 6–8 段）。三项里两项吻合即可基本归类，三项全不吻合时以厂牌官方标注为准。
+            </div>
+
+            <h3>合集番号的时间跨度与选取逻辑</h3>
+            <p>BEST-112 收录 2019 至 2022 年的 8 个番号，选取标准并非评分最高，而是按年份均分——每年 2 个，优先选场景结构差异大的条目。对比 BEST-108（2020 年 5 个番号），BEST-112 的单条平均时长从 28 分钟降到 30 分钟，但跨度从 1 年拉到 4 年。合集的价值在于横向比对，而非单条完整观看。</p>
+          </div>
+        </section>
+
+        <!-- 6. 体验指南 -->
+        <section id="guide">
+          <div class="section-header">
+            <h2>番号消费顺序与判断依据</h2>
+          </div>
+          <div class="guide-steps">
+            <div class="guide-step">
+              <div class="guide-step-content">
+                <strong>先定类型，再看番号前缀</strong>
+                <p>想快速看完选单体短篇（SSIS-865，110 分钟）；想看对手戏选共演（HND-880，场景切换 7 次）；有头显设备再考虑 VR 线。前缀决定类型，先锁定前缀能排除一半以上无关番号。</p>
+              </div>
+            </div>
+            <div class="guide-step">
+              <div class="guide-step-content">
+                <strong>用片长和场景数估算投入</strong>
+                <p>片长超过 140 分钟、场景数 6 段以上的条目，单次看完的概率低，适合分两次。片长 110 至 120 分钟的条目通常一次能看完。场景数比片长更能反映节奏——同样 130 分钟，5 段和 8 段的观感完全不同。</p>
+              </div>
+            </div>
+            <div class="guide-step">
+              <div class="guide-step-content">
+                <strong>比较同类条目时看评分方差</strong>
+                <p>单体作品评分集中在 4.2 至 4.7，差距小，单看评分难分高下；VR 作品方差大（3.9 至 4.8），评分参考价值更高。共演作品评分普遍比单体高 0.2 至 0.4 分，跨类型比评分意义不大。</p>
+              </div>
+            </div>
+            <div class="guide-step">
+              <div class="guide-step-content">
+                <strong>合集优先看时间跨度</strong>
+                <p>BEST-112 跨度 4 年，适合比对风格变化；跨度 1 年的合集（如 BEST-108）更适合补看特定年份。合集内单条平均时长 30 分钟左右，比完整条目短，适合按片段挑。</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 7. FAQ -->
+        <section id="faq">
+          <div class="section-header">
+            <h2>常见问题</h2>
+          </div>
+          <div class="faq-list">
+            <details>
+              <summary>SSIS-892 和 SSIS-878 有什么区别？</summary>
+              <div class="faq-answer">两部同属 S1 长片线，SSIS-892 片长 150 分钟、6 个场景，SSIS-878 片长 145 分钟、5 个场景，评分分别为 4.6 和 4.5。892 的中段有一条 20 分钟连续长镜头，878 的场景切换更平均。按场景数选 892，按节奏均匀选 878。</div>
+            </details>
+            <details>
+              <summary>共演番号 HND 系列通常几个人出演？</summary>
+              <div class="faq-answer">HND 线以双人共演为主，HND-880 和 HND-872 都是两人出演。出场时间占比通常在 60% 至 75% 之间，另一人占 25% 至 40%，具体比例在条目页有标注。三人及以上的共演番号较少，多归入合集线。</div>
+            </details>
+            <details>
+              <summary>VR 番号必须用头显才能看吗？</summary>
+              <div class="faq-answer">VR-215 等 8K 规格条目用手机 VR 盒子也能播放，但播放器版本需在 3.2 以上，否则有画面撕裂。头显与手机盒子的评分均值差 0.6 分，主要差在视角稳定性和清晰度。4K 规格的 VR-209 设备要求更低。</div>
+            </details>
+            <details>
+              <summary>BEST 合集里的番号是完整收录还是剪辑？</summary>
+              <div class="faq-answer">BEST-112 收录的是剪辑段落，单条平均 30 分钟，不是完整番号。合集的作用是横向比对，完整观看仍需找原番号。合集会标注每段对应的原始番号，可以按标注回查。</div>
+            </details>
+            <details>
+              <summary>花井美纱的番号前缀怎么分辨厂牌？</summary>
+              <div class="faq-answer">SSIS 对应 S1，MIDE 和 HND 对应 MOODYZ（HND 为共演线），BEST 对应 IdeaPocket 合集线，VR 前缀跨厂牌。前缀后的数字存在跳号，不代表连续发行。厂牌信息在条目页的标签栏里同步标注。</div>
+            </details>
+            <details>
+              <summary>单体作品评分为什么普遍比共演低？</summary>
+              <div class="faq-answer">共演作品场景数多、出场组合多，评分时容易拿到更高的综合分，平均比单体高 0.2 至 0.4 分。单体作品的评分差异更多来自剧情和节奏，MIDE-756 这类剧情向条目评分能到 4.4，接近共演区间。跨类型直接比评分参考有限。</div>
+            </details>
+          </div>
+        </section>
+
+        <!-- 8. 用户评论 -->
+        <section id="comments">
+          <div class="section-header">
+            <h2>用户评论</h2>
+            <span class="sub">2026 年 10 月至 11 月</span>
+          </div>
+          <div class="comment-grid">
+            <div class="comment-card">
+              <span class="nickname">番号猎人阿凯</span>
+              <p class="comment-text">SSIS-892 那个 20 分钟长镜头确实值回时间，但前面铺垫有点拖，第 40 分钟才进正题。</p>
+              <span class="comment-meta">11-07</span>
+            </div>
+            <div class="comment-card">
+              <span class="nickname">VR 设备党小周</span>
+              <p class="comment-text">VR-215 用 Quest 3 看的，画面稳，但播放器版本低了一档，边缘有轻微撕裂，升级后好了。</p>
+              <span class="comment-meta">11-06</span>
+            </div>
+            <div class="comment-card">
+              <span class="nickname">MIDE 线老观众</span>
+              <p class="comment-text">MIDE-756 对白太多了，我就想看点直接的，40% 对白对我来说是减分项。不过剧情确实完整。</p>
+              <span class="comment-meta">11-05</span>
+            </div>
+            <div class="comment-card">
+              <span class="nickname">今天也在补番</span>
+              <p class="comment-text">HND-880 两个人配合比预想好，切场景不突兀。就是 130 分钟有点长，中间暂停了一次。</p>
+              <span class="comment-meta">11-05</span>
+            </div>
+            <div class="comment-card">
+              <span class="nickname">短篇爱好者</span>
+              <p class="comment-text">SSIS-865 110 分钟，4 个场景，节奏舒服，适合下班后看。长片现在真看不完。</p>
+              <span class="comment-meta">11-04</span>
+            </div>
+            <div class="comment-card">
+              <span class="nickname">合集收藏者老李</span>
+              <p class="comment-text">BEST-112 跨度四年这点好，能看出 2019 年和 2022 年拍摄风格差挺多，光线处理完全不一样。</p>
+              <span class="comment-meta">11-03</span>
+            </div>
+            <div class="comment-card">
+              <span class="nickname">不吐不快</span>
+              <p class="comment-text">评分 4.6 和 4.7 的差别真没感觉出来，都是差不多的水准，别太纠结小数点。</p>
+              <span class="comment-meta">11-02</span>
+            </div>
+            <div class="comment-card">
+              <span class="nickname">找番号的路人</span>
+              <p class="comment-text">前缀跳号这事困扰我好久，SSIS 从 865 直接到 878，中间那些是没发行还是没收录？</p>
+              <span class="comment-meta">11-01</span>
+            </div>
+            <div class="comment-card">
+              <span class="nickname">头显用户 07</span>
+              <p class="comment-text">VR 线片长短是硬伤，50 分钟刚进入状态就结束了。不过戴久了确实累，也能理解。</p>
+              <span class="comment-meta">10-30</span>
+            </div>
+            <div class="comment-card">
+              <span class="nickname">场景党</span>
+              <p class="comment-text">看共演就是看场景切换，HND-880 七段切换算密集的，比某些四段硬撑两小时的好太多。</p>
+              <span class="comment-meta">10-29</span>
+            </div>
+            <div class="comment-card">
+              <span class="nickname">随便看看 233</span>
+              <p class="comment-text">最近在补早期的单体，发现 2020 年那批光线偏暗，和现在不是一个风格。</p>
+              <span class="comment-meta">10-27</span>
+            </div>
+            <div class="comment-card">
+              <span class="nickname">挑剔的观众</span>
+              <p class="comment-text">VR-209 只有两个固定机位，转个头就没内容了，4K 清晰度也一般，不如 215。</p>
+              <span class="comment-meta">10-26</span>
+            </div>
+            <div class="comment-card">
+              <span class="nickname">时间管理大师</span>
+              <p class="comment-text">现在选片先看片长，超过 140 分钟的基本要分两天，不然中途睡着。</p>
+              <span class="comment-meta">10-24</span>
+            </div>
+            <div class="comment-card">
+              <span class="nickname">M 厂牌粉丝</span>
+              <p class="comment-text">MOODYZ 的共演线比单体线用心，HND 系列场景设计明显花心思，值 4.8。</p>
+              <span class="comment-meta">10-22</span>
+            </div>
+            <div class="comment-card">
+              <span class="nickname">路过打酱油</span>
+              <p class="comment-text">我就想知道 BEST 合集能不能单买某一年的，只看一年的内容。</p>
+              <span class="comment-meta">10-20</span>
+            </div>
+            <div class="comment-card">
+              <span class="nickname">评分参考系</span>
+              <p class="comment-text">单体 4.2 到 4.7 这个区间太窄了，选哪部差别不大，不如看片长和场景数来得实在。</p>
+              <span class="comment-meta">10-18</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- 9. 相关资讯 -->
+        <section id="news">
+          <div class="section-header">
+            <h2>番号相关资讯</h2>
+          </div>
+          <div class="news-list">
+            <div class="news-item">
+              <div class="news-title">S1 公布 2026 年 11 月发行清单，SSIS-892 位列长片线首位</div>
+              <div class="news-date">2026-11-05</div>
+              <p class="news-summary">清单共 12 个番号，长片线 3 个，SSIS-892 片长 150 分钟为最长。同批还包含 2 个 VR 规格条目，发行日期定在 11 月 18 日。</p>
+            </div>
+            <div class="news-item">
+              <div class="news-title">MOODYZ 共演线 HND 系列更新 3 个番号，HND-880 场景数据公开</div>
+              <div class="news-date">2026-11-04</div>
+              <p class="news-summary">HND-880 标注 7 个场景，双人出场占比 70%，为 HND 线近三年场景数最多的一部。另外两个番号 HND-876、HND-884 分别定档 11 月 12 日和 11 月 25 日。</p>
+            </div>
+            <div class="news-item">
+              <div class="news-title">FALENO VR 线推送播放器 3.2 版本，修复 8K 画面撕裂</div>
+              <div class="news-date">2026-10-30</div>
+              <p class="news-summary">更新说明提到 8K 规格在旧版本下边缘撕裂概率约 15%，3.2 版本降至 2% 以下。VR-215 是首批适配的番号之一。</p>
+            </div>
+            <div class="news-item">
+              <div class="news-title">IdeaPocket 合集 BEST-112 收录 2019–2022 年 8 个番号</div>
+              <div class="news-date">2026-10-26</div>
+              <p class="news-summary">按年份均分，每年 2 个，单条平均 30 分钟。BEST 线今年已发行 3 部合集，BEST-112 是时间跨度最大的一部。</p>
+            </div>
+            <div class="news-item">
+              <div class="news-title">SSIS 线 2026 年跳号区间公开，865 至 878 之间缺 4 个番号</div>
+              <div class="news-date">2026-10-20</div>
+              <p class="news-summary">S1 官方目录显示该区间实际发行 9 个番号，其中 4 个为限定渠道，未进入常规索引。跳号不代表未发行，而是渠道差异。</p>
+            </div>
+            <div class="news-item">
+              <div class="news-title">MOODYZ 剧情向单体 MIDE-756 评分升至 4.4，对白占比修正</div>
+              <div class="news-date">2026-10-16</div>
+              <p class="news-summary">条目页将对白占比从 35% 修正为 40%，评分由 4.3 上调至 4.4。同批修正的还有 MIDE-743 的场景数标注。</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- 10. 相关推荐 -->
+        <section id="recommend">
+          <div class="section-header">
+            <h2>相关方向推荐</h2>
+          </div>
+          <div class="tag-cloud">
+            <a href="/#featured">SSIS 长片线</a>
+            <a href="/#featured">HND 共演系列</a>
+            <a href="/#featured">VR 8K 条目</a>
+            <a href="/#featured">BEST 合集线</a>
+            <a href="/#featured">MIDE 剧情向</a>
+            <a href="/#featured">S1 厂牌索引</a>
+            <a href="/#featured">MOODYZ 共演</a>
+            <a href="/#featured">IdeaPocket 合集</a>
+          </div>
+        </section>
+
+        <!-- 11. 补充板块：热门榜单 -->
+        <section id="ranking">
+          <div class="section-header">
+            <h2>近期热度榜单</h2>
+            <span class="sub">按 2026 年 11 月 1 日至 7 日访问与评分综合排序</span>
+          </div>
+          <div class="ranking-panel">
+            <div class="ranking-header">
+              <span>番号</span>
+              <span>热度 / 评分</span>
+            </div>
+            <div class="ranking-row">
+              <span class="num">1</span>
+              <span class="name">HND-880</span>
+              <span class="info">热度 9.4 · 4.8 分</span>
+            </div>
+            <div class="ranking-row">
+              <span class="num">2</span>
+              <span class="name">SSIS-892</span>
+              <span class="info">热度 9.1 · 4.6 分</span>
+            </div>
+            <div class="ranking-row">
+              <span class="num">3</span>
+              <span class="name">BEST-112</span>
+              <span class="info">热度 8.9 · 4.5 分</span>
+            </div>
+            <div class="ranking-row">
+              <span class="num">4</span>
+              <span class="name">VR-215</span>
+              <span class="info">热度 8.7 · 4.3 分</span>
+            </div>
+            <div class="ranking-row">
+              <span class="num">5</span>
+              <span class="name">MIDE-756</span>
+              <span class="info">热度 8.5 · 4.4 分</span>
+            </div>
+            <div class="ranking-row">
+              <span class="num">6</span>
+              <span class="name">SSIS-878</span>
+              <span class="info">热度 8.3 · 4.5 分</span>
+            </div>
+            <div class="ranking-row">
+              <span class="num">7</span>
+              <span class="name">SSIS-865</span>
+              <span class="info">热度 8.1 · 4.2 分</span>
+            </div>
+            <div class="ranking-row">
+              <span class="num">8</span>
+              <span class="name">HND-872</span>
+              <span class="info">热度 7.9 · 4.4 分</span>
+            </div>
+          </div>
+        </section>
+
+      </main>
+
+      <!-- 右侧辅助栏 -->
+      <aside class="sidebar-right" aria-label="辅助信息">
+        <div class="side-card">
+          <h3>近期更新条目</h3>
+          <ul>
+            <li><span class="rank">11-07</span> SSIS-892 新增</li>
+            <li><span class="rank">11-06</span> HND-880 场景标记</li>
+            <li><span class="rank">11-05</span> VR-215 兼容说明</li>
+            <li><span class="rank">11-03</span> BEST-112 合集上线</li>
+            <li><span class="rank">10-28</span> MIDE-756 评分修正</li>
+          </ul>
+        </div>
+        <div class="side-card">
+          <h3>番号数量速览</h3>
+          <ul>
+            <li><span class="rank">68</span> 单体作品</li>
+            <li><span class="rank">27</span> 共演作品</li>
+            <li><span class="rank">14</span> VR 专题</li>
+            <li><span class="rank">11</span> 合集企划</li>
+          </ul>
+        </div>
+        <div class="side-card">
+          <h3>投稿与互动</h3>
+          <ul>
+            <li><a href="/#comments">分享你对番号的看法</a></li>
+            <li><a href="/#featured">提交新番号线索</a></li>
+            <li><a href="/#faq">参与条目纠错</a></li>
+          </ul>
+        </div>
+      </aside>
+
+    </div>
+  </div>
+
+  <!-- 页脚 -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-brand">花井美纱番号</div>
+        <p class="footer-desc">覆盖 2019 年至 2026 年 11 月的番号索引，按单体、共演、VR 与合集四类组织，条目含片长、场景数、评分与厂牌标注，更新频率为每周 1 至 2 个新番号。</p>
+      </div>
+      <div class="footer-col">
+        <h4>内容分类</h4>
+        <a href="/#featured">单体作品</a>
+        <a href="/#featured">共演作品</a>
+        <a href="/#featured">VR 专题</a>
+        <a href="/#featured">合集企划</a>
+      </div>
+      <div class="footer-col">
+        <h4>栏目入口</h4>
+        <a href="/#overview">领域概览</a>
+        <a href="/#deep-dive">深度解析</a>
+        <a href="/#guide">体验指南</a>
+        <a href="/#faq">常见问答</a>
+      </div>
+      <div class="footer-col">
+        <h4>互动与榜单</h4>
+        <a href="/#comments">用户评论</a>
+        <a href="/#ranking">热门榜单</a>
+        <a href="/#news">相关资讯</a>
+        <a href="/#recommend">相关推荐</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>页面内番号、评分、热度均为示例数据，用于内容展示。</span>
+      <span>更新至 2026-11-08</span>
+    </div>
+  </footer>
+
+  <!-- 返回顶部 -->
+  <button class="back-to-top" id="backToTop" aria-label="返回顶部">↑</button>
+
+  <!-- 结构化数据 -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "花井美纱番号",
+    "description": "花井美纱番号索引与类型解析页面，收录单体、共演、VR 与合集番号，含评分、片长与厂牌标注。",
+    "inLanguage": "zh-CN"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "SSIS-892 和 SSIS-878 有什么区别？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "两部同属 S1 长片线，SSIS-892 片长 150 分钟、6 个场景，SSIS-878 片长 145 分钟、5 个场景，评分分别为 4.6 和 4.5。892 的中段有一条 20 分钟连续长镜头，878 的场景切换更平均。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "共演番号 HND 系列通常几个人出演？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "HND 线以双人共演为主，HND-880 和 HND-872 都是两人出演。出场时间占比通常在 60% 至 75% 之间。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "VR 番号必须用头显才能看吗？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "VR-215 等 8K 规格条目用手机 VR 盒子也能播放，但播放器版本需在 3.2 以上。头显与手机盒子的评分均值差 0.6 分。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "BEST 合集里的番号是完整收录还是剪辑？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "BEST-112 收录的是剪辑段落，单条平均 30 分钟，不是完整番号。合集的作用是横向比对，完整观看仍需找原番号。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "花井美纱的番号前缀怎么分辨厂牌？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "SSIS 对应 S1，MIDE 和 HND 对应 MOODYZ，BEST 对应 IdeaPocket 合集线，VR 前缀跨厂牌。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "单体作品评分为什么普遍比共演低？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "共演作品场景数多、出场组合多，评分时容易拿到更高的综合分，平均比单体高 0.2 至 0.4 分。"
+        }
+      }
+    ]
+  }
+  </script>
+
+  <script>
+    // 移动端菜单
+    const hamburgerBtn = document.getElementById('hamburgerBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const mobileMenuClose = document.getElementById('mobileMenuClose');
+    const mobileMenuPanel = document.getElementById('mobileMenuPanel');
+
+    function openMenu() {
+      mobileMenu.classList.add('open');
+      hamburgerBtn.setAttribute('aria-expanded', 'true');
+    }
+
+    function closeMenu() {
+      mobileMenu.classList.remove('open');
+      hamburgerBtn.setAttribute('aria-expanded', 'false');
+    }
+
+    hamburgerBtn.addEventListener('click', () => {
+      if (mobileMenu.classList.contains('open')) {
+        closeMenu();
+      } else {
+        openMenu();
+      }
+    });
+
+    mobileMenuClose.addEventListener('click', closeMenu);
+
+    mobileMenu.addEventListener('click', (e) => {
+      if (e.target === mobileMenu) {
+        closeMenu();
+      }
+    });
+
+    mobileMenuPanel.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', closeMenu);
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && mobileMenu.classList.contains('open')) {
+        closeMenu();
+      }
+    });
+
+    // 返回顶部
+    const backToTop = document.getElementById('backToTop');
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > window.innerHeight) {
+        backToTop.classList.add('visible');
+      } else {
+        backToTop.classList.remove('visible');
+      }
+    });
+
+    backToTop.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // 卡片筛选
+    const cardSearch = document.getElementById('cardSearch');
+    const searchBtn = document.getElementById('searchBtn');
+    const cardGrid = document.getElementById('cardGrid');
+    const noResult = document.getElementById('noResult');
+    const cards = Array.from(cardGrid.children);
+
+    function filterCards() {
+      const query = cardSearch.value.trim().toLowerCase();
+      let visibleCount = 0;
+
+      cards.forEach(card => {
+        const tags = (card.getAttribute('data-tags') || '').toLowerCase();
+        const title = card.querySelector('.card-title')?.textContent.toLowerCase() || '';
+        if (!query || tags.includes(query) || title.includes(query)) {
+          card.style.display = '';
+          visibleCount++;
+        } else {
+          card.style.display = 'none';
+        }
+      });
+
+      noResult.style.display = visibleCount === 0 ? 'block' : 'none';
+    }
+
+    searchBtn.addEventListener('click', filterCards);
+    cardSearch.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') {
+        filterCards();
+      }
+    });
+
+    // 滚动高亮左侧导航
+    const sections = document.querySelectorAll('.main-content section[id]');
+    const leftLinks = document.querySelectorAll('.sidebar-left a');
+
+    function highlightNav() {
+      let currentId = '';
+      const scrollPos = window.scrollY + 140;
+
+      sections.forEach(section => {
+        if (section.offsetTop <= scrollPos) {
+          currentId = section.id;
+        }
+      });
+
+      leftLinks.forEach(link => {
+        link.classList.toggle('active', link.getAttribute('href') === '/#' + currentId);
+      });
+    }
+
+    window.addEventListener('scroll', highlightNav);
+    highlightNav();
+  </script>
+
+</body>
+            </html>
